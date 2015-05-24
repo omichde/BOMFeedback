@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>APPId</key>
+	<string>12345678</string>
+	<key>ITMSURL</key>
+	<string>http://itunes.apple.com/de/app/id12345678?mt=8</string>
+	<key>WebURL</key>
+	<string>http://getniceapp.com</string>
+	<key>modules</key>
+	<array>
+		<dict>
+			<key>name</key>
+			<string>contact</string>
+			<key>email</key>
+			<string>info@omich.de</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>apps</string>
+			<key>URL</key>
+			<string>http://getallniceapps.com</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>about</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>modules</string>
+			<key>files</key>
+			<array>
+				<string>Paket1.rtf</string>
+				<string>Paket2.html</string>
+				<string>Paket3.pdf</string>
+			</array>
+		</dict>
+	</array>
+</dict>
+</plist>

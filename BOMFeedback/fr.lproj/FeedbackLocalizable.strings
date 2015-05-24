@@ -1,0 +1,22 @@
+/*
+ FeedbackLocalizable.strings
+ callmevip
+ 
+ Created by Oliver Michalak on 22.05.15.
+ Copyright (c) 2015 Oliver Michalak. All rights reserved.
+ */
+
+"Contact" = "Contact";
+"APPs" = "APPs";
+"About" = "About";
+"Modules" = "Modules";
+
+"Email-Subject" = "NiceAPP";
+"Email-Text" = "I like NiceAPP, just give it a try:\n<http://itunes.apple.com/de/app/id12345678?mt=8>\n\nAll information about this APP can be found at:\n<http://getniceapp.com>";
+
+"Twitter-Text" = "#NiceAPP is funny: http://itunes.apple.com/de/app/id12345678?mt=8";
+
+"Facebook-Text" = "#NiceAPP is funny: http://itunes.apple.com/de/app/id12345678?mt=8";
+
+"Report-Subject" = "Report - NiceAPP";
+"Report-Template" = "Report:\n\n(your comment here)\n\nLink: <%@>\nVersion: %@\nLocale: %@\nDevice: %@\niOS: %@";

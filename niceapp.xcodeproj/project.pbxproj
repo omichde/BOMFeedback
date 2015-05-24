@@ -1,0 +1,581 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DE78456D1B120E8F003B21B7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DE78456C1B120E8F003B21B7 /* main.m */; };
+		DE7845701B120E8F003B21B7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DE78456F1B120E8F003B21B7 /* AppDelegate.m */; };
+		DE7845731B120E8F003B21B7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE7845721B120E8F003B21B7 /* ViewController.m */; };
+		DE7845761B120E8F003B21B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE7845741B120E8F003B21B7 /* Main.storyboard */; };
+		DE7845781B120E8F003B21B7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE7845771B120E8F003B21B7 /* Images.xcassets */; };
+		DE78457B1B120E8F003B21B7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE7845791B120E8F003B21B7 /* LaunchScreen.xib */; };
+		DE7845871B120E8F003B21B7 /* niceappTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DE7845861B120E8F003B21B7 /* niceappTests.m */; };
+		DE7845D51B120F86003B21B7 /* AboutFeedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE7845BC1B120F86003B21B7 /* AboutFeedbackViewController.m */; };
+		DE7845D61B120F86003B21B7 /* AbstractFeedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE7845BE1B120F86003B21B7 /* AbstractFeedbackViewController.m */; };
+		DE7845D71B120F86003B21B7 /* AppsFeedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE7845C01B120F86003B21B7 /* AppsFeedbackViewController.m */; };
+		DE7845D81B120F86003B21B7 /* ContactFeedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE7845C21B120F86003B21B7 /* ContactFeedbackViewController.m */; };
+		DE7845D91B120F86003B21B7 /* DislikeFeedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE7845C41B120F86003B21B7 /* DislikeFeedbackViewController.m */; };
+		DE7845DA1B120F86003B21B7 /* Feedback-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = DE7845C51B120F86003B21B7 /* Feedback-Regular.otf */; };
+		DE7845DC1B120F86003B21B7 /* FeedbackController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE7845C81B120F86003B21B7 /* FeedbackController.m */; };
+		DE7845DD1B120F86003B21B7 /* FeedbackIconFont.m in Sources */ = {isa = PBXBuildFile; fileRef = DE7845CA1B120F86003B21B7 /* FeedbackIconFont.m */; };
+		DE7845DE1B120F86003B21B7 /* LikeFeedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE7845CC1B120F86003B21B7 /* LikeFeedbackViewController.m */; };
+		DE7845DF1B120F86003B21B7 /* ModulesFeedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE7845CE1B120F86003B21B7 /* ModulesFeedbackViewController.m */; };
+		DE7845E01B120F86003B21B7 /* ModulFeedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE7845D01B120F86003B21B7 /* ModulFeedbackViewController.m */; };
+		DE7845E11B120F86003B21B7 /* Feedback.plist in Resources */ = {isa = PBXBuildFile; fileRef = DE7845D11B120F86003B21B7 /* Feedback.plist */; };
+		DE7845E41B12117A003B21B7 /* FeedbackFAQ.plist in Resources */ = {isa = PBXBuildFile; fileRef = DE7845E61B12117A003B21B7 /* FeedbackFAQ.plist */; };
+		DE7845E81B1211A3003B21B7 /* about.html in Resources */ = {isa = PBXBuildFile; fileRef = DE7845EA1B1211A3003B21B7 /* about.html */; };
+		DE7845EB1B1211AD003B21B7 /* FeedbackLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DE7845ED1B1211AD003B21B7 /* FeedbackLocalizable.strings */; };
+		DE7845F71B121294003B21B7 /* Feedback.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE7845F61B121284003B21B7 /* Feedback.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DE7845811B120E8F003B21B7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DE78455F1B120E8F003B21B7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DE7845661B120E8F003B21B7;
+			remoteInfo = niceapp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DE7845671B120E8F003B21B7 /* niceapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = niceapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE78456B1B120E8F003B21B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE78456C1B120E8F003B21B7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DE78456E1B120E8F003B21B7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		DE78456F1B120E8F003B21B7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		DE7845711B120E8F003B21B7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		DE7845721B120E8F003B21B7 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		DE7845751B120E8F003B21B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DE7845771B120E8F003B21B7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		DE78457A1B120E8F003B21B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		DE7845801B120E8F003B21B7 /* niceappTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = niceappTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE7845851B120E8F003B21B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE7845861B120E8F003B21B7 /* niceappTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = niceappTests.m; sourceTree = "<group>"; };
+		DE7845BB1B120F86003B21B7 /* AboutFeedbackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutFeedbackViewController.h; sourceTree = "<group>"; };
+		DE7845BC1B120F86003B21B7 /* AboutFeedbackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutFeedbackViewController.m; sourceTree = "<group>"; };
+		DE7845BD1B120F86003B21B7 /* AbstractFeedbackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractFeedbackViewController.h; sourceTree = "<group>"; };
+		DE7845BE1B120F86003B21B7 /* AbstractFeedbackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbstractFeedbackViewController.m; sourceTree = "<group>"; };
+		DE7845BF1B120F86003B21B7 /* AppsFeedbackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppsFeedbackViewController.h; sourceTree = "<group>"; };
+		DE7845C01B120F86003B21B7 /* AppsFeedbackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppsFeedbackViewController.m; sourceTree = "<group>"; };
+		DE7845C11B120F86003B21B7 /* ContactFeedbackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactFeedbackViewController.h; sourceTree = "<group>"; };
+		DE7845C21B120F86003B21B7 /* ContactFeedbackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactFeedbackViewController.m; sourceTree = "<group>"; };
+		DE7845C31B120F86003B21B7 /* DislikeFeedbackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DislikeFeedbackViewController.h; sourceTree = "<group>"; };
+		DE7845C41B120F86003B21B7 /* DislikeFeedbackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DislikeFeedbackViewController.m; sourceTree = "<group>"; };
+		DE7845C51B120F86003B21B7 /* Feedback-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Feedback-Regular.otf"; sourceTree = "<group>"; };
+		DE7845C71B120F86003B21B7 /* FeedbackController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedbackController.h; sourceTree = "<group>"; };
+		DE7845C81B120F86003B21B7 /* FeedbackController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedbackController.m; sourceTree = "<group>"; };
+		DE7845C91B120F86003B21B7 /* FeedbackIconFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedbackIconFont.h; sourceTree = "<group>"; };
+		DE7845CA1B120F86003B21B7 /* FeedbackIconFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedbackIconFont.m; sourceTree = "<group>"; };
+		DE7845CB1B120F86003B21B7 /* LikeFeedbackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LikeFeedbackViewController.h; sourceTree = "<group>"; };
+		DE7845CC1B120F86003B21B7 /* LikeFeedbackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LikeFeedbackViewController.m; sourceTree = "<group>"; };
+		DE7845CD1B120F86003B21B7 /* ModulesFeedbackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModulesFeedbackViewController.h; sourceTree = "<group>"; };
+		DE7845CE1B120F86003B21B7 /* ModulesFeedbackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModulesFeedbackViewController.m; sourceTree = "<group>"; };
+		DE7845CF1B120F86003B21B7 /* ModulFeedbackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModulFeedbackViewController.h; sourceTree = "<group>"; };
+		DE7845D01B120F86003B21B7 /* ModulFeedbackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModulFeedbackViewController.m; sourceTree = "<group>"; };
+		DE7845D11B120F86003B21B7 /* Feedback.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Feedback.plist; sourceTree = "<group>"; };
+		DE7845E51B12117A003B21B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Base; path = Base.lproj/FeedbackFAQ.plist; sourceTree = "<group>"; };
+		DE7845E91B1211A3003B21B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = Base; path = Base.lproj/about.html; sourceTree = "<group>"; };
+		DE7845EC1B1211AD003B21B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/FeedbackLocalizable.strings; sourceTree = "<group>"; };
+		DE7845EE1B1211C0003B21B7 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = fr; path = fr.lproj/about.html; sourceTree = "<group>"; };
+		DE7845EF1B1211C0003B21B7 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = fr; path = fr.lproj/FeedbackFAQ.plist; sourceTree = "<group>"; };
+		DE7845F01B1211C0003B21B7 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/FeedbackLocalizable.strings; sourceTree = "<group>"; };
+		DE7845F11B1211C7003B21B7 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = de; path = de.lproj/about.html; sourceTree = "<group>"; };
+		DE7845F21B1211C7003B21B7 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = de; path = de.lproj/FeedbackFAQ.plist; sourceTree = "<group>"; };
+		DE7845F31B1211C7003B21B7 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/FeedbackLocalizable.strings; sourceTree = "<group>"; };
+		DE7845F51B121284003B21B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Feedback.storyboard; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DE7845641B120E8F003B21B7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE78457D1B120E8F003B21B7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DE78455E1B120E8F003B21B7 = {
+			isa = PBXGroup;
+			children = (
+				DE7845691B120E8F003B21B7 /* niceapp */,
+				DE7845831B120E8F003B21B7 /* niceappTests */,
+				DE7845681B120E8F003B21B7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DE7845681B120E8F003B21B7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DE7845671B120E8F003B21B7 /* niceapp.app */,
+				DE7845801B120E8F003B21B7 /* niceappTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DE7845691B120E8F003B21B7 /* niceapp */ = {
+			isa = PBXGroup;
+			children = (
+				DE78456E1B120E8F003B21B7 /* AppDelegate.h */,
+				DE78456F1B120E8F003B21B7 /* AppDelegate.m */,
+				DE7845711B120E8F003B21B7 /* ViewController.h */,
+				DE7845721B120E8F003B21B7 /* ViewController.m */,
+				DE7845741B120E8F003B21B7 /* Main.storyboard */,
+				DE7845771B120E8F003B21B7 /* Images.xcassets */,
+				DE7845791B120E8F003B21B7 /* LaunchScreen.xib */,
+				DE7845B81B120F86003B21B7 /* BOMFeedback */,
+				DE78456A1B120E8F003B21B7 /* Supporting Files */,
+			);
+			path = niceapp;
+			sourceTree = "<group>";
+		};
+		DE78456A1B120E8F003B21B7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DE78456B1B120E8F003B21B7 /* Info.plist */,
+				DE78456C1B120E8F003B21B7 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DE7845831B120E8F003B21B7 /* niceappTests */ = {
+			isa = PBXGroup;
+			children = (
+				DE7845861B120E8F003B21B7 /* niceappTests.m */,
+				DE7845841B120E8F003B21B7 /* Supporting Files */,
+			);
+			path = niceappTests;
+			sourceTree = "<group>";
+		};
+		DE7845841B120E8F003B21B7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DE7845851B120E8F003B21B7 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DE7845B81B120F86003B21B7 /* BOMFeedback */ = {
+			isa = PBXGroup;
+			children = (
+				DE7845EA1B1211A3003B21B7 /* about.html */,
+				DE7845BA1B120F86003B21B7 /* Feedback */,
+				DE7845D11B120F86003B21B7 /* Feedback.plist */,
+				DE7845E61B12117A003B21B7 /* FeedbackFAQ.plist */,
+				DE7845ED1B1211AD003B21B7 /* FeedbackLocalizable.strings */,
+			);
+			path = BOMFeedback;
+			sourceTree = SOURCE_ROOT;
+		};
+		DE7845BA1B120F86003B21B7 /* Feedback */ = {
+			isa = PBXGroup;
+			children = (
+				DE7845F61B121284003B21B7 /* Feedback.storyboard */,
+				DE7845C71B120F86003B21B7 /* FeedbackController.h */,
+				DE7845C81B120F86003B21B7 /* FeedbackController.m */,
+				DE7845BB1B120F86003B21B7 /* AboutFeedbackViewController.h */,
+				DE7845BC1B120F86003B21B7 /* AboutFeedbackViewController.m */,
+				DE7845BD1B120F86003B21B7 /* AbstractFeedbackViewController.h */,
+				DE7845BE1B120F86003B21B7 /* AbstractFeedbackViewController.m */,
+				DE7845BF1B120F86003B21B7 /* AppsFeedbackViewController.h */,
+				DE7845C01B120F86003B21B7 /* AppsFeedbackViewController.m */,
+				DE7845C11B120F86003B21B7 /* ContactFeedbackViewController.h */,
+				DE7845C21B120F86003B21B7 /* ContactFeedbackViewController.m */,
+				DE7845C31B120F86003B21B7 /* DislikeFeedbackViewController.h */,
+				DE7845C41B120F86003B21B7 /* DislikeFeedbackViewController.m */,
+				DE7845C51B120F86003B21B7 /* Feedback-Regular.otf */,
+				DE7845C91B120F86003B21B7 /* FeedbackIconFont.h */,
+				DE7845CA1B120F86003B21B7 /* FeedbackIconFont.m */,
+				DE7845CB1B120F86003B21B7 /* LikeFeedbackViewController.h */,
+				DE7845CC1B120F86003B21B7 /* LikeFeedbackViewController.m */,
+				DE7845CD1B120F86003B21B7 /* ModulesFeedbackViewController.h */,
+				DE7845CE1B120F86003B21B7 /* ModulesFeedbackViewController.m */,
+				DE7845CF1B120F86003B21B7 /* ModulFeedbackViewController.h */,
+				DE7845D01B120F86003B21B7 /* ModulFeedbackViewController.m */,
+			);
+			path = Feedback;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DE7845661B120E8F003B21B7 /* niceapp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE78458A1B120E8F003B21B7 /* Build configuration list for PBXNativeTarget "niceapp" */;
+			buildPhases = (
+				DE7845631B120E8F003B21B7 /* Sources */,
+				DE7845641B120E8F003B21B7 /* Frameworks */,
+				DE7845651B120E8F003B21B7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = niceapp;
+			productName = niceapp;
+			productReference = DE7845671B120E8F003B21B7 /* niceapp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DE78457F1B120E8F003B21B7 /* niceappTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE78458D1B120E8F003B21B7 /* Build configuration list for PBXNativeTarget "niceappTests" */;
+			buildPhases = (
+				DE78457C1B120E8F003B21B7 /* Sources */,
+				DE78457D1B120E8F003B21B7 /* Frameworks */,
+				DE78457E1B120E8F003B21B7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DE7845821B120E8F003B21B7 /* PBXTargetDependency */,
+			);
+			name = niceappTests;
+			productName = niceappTests;
+			productReference = DE7845801B120E8F003B21B7 /* niceappTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DE78455F1B120E8F003B21B7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "Oliver Michalak";
+				TargetAttributes = {
+					DE7845661B120E8F003B21B7 = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+					DE78457F1B120E8F003B21B7 = {
+						CreatedOnToolsVersion = 6.3.2;
+						TestTargetID = DE7845661B120E8F003B21B7;
+					};
+				};
+			};
+			buildConfigurationList = DE7845621B120E8F003B21B7 /* Build configuration list for PBXProject "niceapp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				fr,
+				de,
+			);
+			mainGroup = DE78455E1B120E8F003B21B7;
+			productRefGroup = DE7845681B120E8F003B21B7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DE7845661B120E8F003B21B7 /* niceapp */,
+				DE78457F1B120E8F003B21B7 /* niceappTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DE7845651B120E8F003B21B7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE7845E41B12117A003B21B7 /* FeedbackFAQ.plist in Resources */,
+				DE7845E81B1211A3003B21B7 /* about.html in Resources */,
+				DE7845761B120E8F003B21B7 /* Main.storyboard in Resources */,
+				DE7845DA1B120F86003B21B7 /* Feedback-Regular.otf in Resources */,
+				DE7845EB1B1211AD003B21B7 /* FeedbackLocalizable.strings in Resources */,
+				DE78457B1B120E8F003B21B7 /* LaunchScreen.xib in Resources */,
+				DE7845781B120E8F003B21B7 /* Images.xcassets in Resources */,
+				DE7845E11B120F86003B21B7 /* Feedback.plist in Resources */,
+				DE7845F71B121294003B21B7 /* Feedback.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE78457E1B120E8F003B21B7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DE7845631B120E8F003B21B7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE7845731B120E8F003B21B7 /* ViewController.m in Sources */,
+				DE7845DE1B120F86003B21B7 /* LikeFeedbackViewController.m in Sources */,
+				DE7845701B120E8F003B21B7 /* AppDelegate.m in Sources */,
+				DE7845DF1B120F86003B21B7 /* ModulesFeedbackViewController.m in Sources */,
+				DE78456D1B120E8F003B21B7 /* main.m in Sources */,
+				DE7845D91B120F86003B21B7 /* DislikeFeedbackViewController.m in Sources */,
+				DE7845DC1B120F86003B21B7 /* FeedbackController.m in Sources */,
+				DE7845D81B120F86003B21B7 /* ContactFeedbackViewController.m in Sources */,
+				DE7845D51B120F86003B21B7 /* AboutFeedbackViewController.m in Sources */,
+				DE7845E01B120F86003B21B7 /* ModulFeedbackViewController.m in Sources */,
+				DE7845D61B120F86003B21B7 /* AbstractFeedbackViewController.m in Sources */,
+				DE7845DD1B120F86003B21B7 /* FeedbackIconFont.m in Sources */,
+				DE7845D71B120F86003B21B7 /* AppsFeedbackViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE78457C1B120E8F003B21B7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE7845871B120E8F003B21B7 /* niceappTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DE7845821B120E8F003B21B7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DE7845661B120E8F003B21B7 /* niceapp */;
+			targetProxy = DE7845811B120E8F003B21B7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DE7845741B120E8F003B21B7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DE7845751B120E8F003B21B7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DE7845791B120E8F003B21B7 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DE78457A1B120E8F003B21B7 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		DE7845E61B12117A003B21B7 /* FeedbackFAQ.plist */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DE7845E51B12117A003B21B7 /* Base */,
+				DE7845EF1B1211C0003B21B7 /* fr */,
+				DE7845F21B1211C7003B21B7 /* de */,
+			);
+			name = FeedbackFAQ.plist;
+			sourceTree = "<group>";
+		};
+		DE7845EA1B1211A3003B21B7 /* about.html */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DE7845E91B1211A3003B21B7 /* Base */,
+				DE7845EE1B1211C0003B21B7 /* fr */,
+				DE7845F11B1211C7003B21B7 /* de */,
+			);
+			name = about.html;
+			sourceTree = "<group>";
+		};
+		DE7845ED1B1211AD003B21B7 /* FeedbackLocalizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DE7845EC1B1211AD003B21B7 /* Base */,
+				DE7845F01B1211C0003B21B7 /* fr */,
+				DE7845F31B1211C7003B21B7 /* de */,
+			);
+			name = FeedbackLocalizable.strings;
+			sourceTree = "<group>";
+		};
+		DE7845F61B121284003B21B7 /* Feedback.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DE7845F51B121284003B21B7 /* Base */,
+			);
+			name = Feedback.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DE7845881B120E8F003B21B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DE7845891B120E8F003B21B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DE78458B1B120E8F003B21B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = niceapp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DE78458C1B120E8F003B21B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = niceapp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		DE78458E1B120E8F003B21B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = niceappTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/niceapp.app/niceapp";
+			};
+			name = Debug;
+		};
+		DE78458F1B120E8F003B21B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = niceappTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/niceapp.app/niceapp";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DE7845621B120E8F003B21B7 /* Build configuration list for PBXProject "niceapp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE7845881B120E8F003B21B7 /* Debug */,
+				DE7845891B120E8F003B21B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DE78458A1B120E8F003B21B7 /* Build configuration list for PBXNativeTarget "niceapp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE78458B1B120E8F003B21B7 /* Debug */,
+				DE78458C1B120E8F003B21B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DE78458D1B120E8F003B21B7 /* Build configuration list for PBXNativeTarget "niceappTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE78458E1B120E8F003B21B7 /* Debug */,
+				DE78458F1B120E8F003B21B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DE78455F1B120E8F003B21B7 /* Project object */;
+}
