@@ -36,7 +36,7 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
 	AbstractFeedbackViewController *feedbackViewController = segue.destinationViewController;
-	feedbackViewController.setupDict = self.setupDict;
+	feedbackViewController.moduleConfig = self.moduleConfig;
 }
 
 @end

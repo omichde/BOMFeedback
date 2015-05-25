@@ -8,23 +8,40 @@
 	<string>http://itunes.apple.com/de/app/id12345678?mt=8</string>
 	<key>WebURL</key>
 	<string>http://getniceapp.com</string>
+	<key>colors</key>
+	<dict>
+		<key>text</key>
+		<string>0x00ff00</string>
+		<key>viewBackground</key>
+		<string>0xff0000</string>
+		<key>buttonBackground</key>
+		<string>0x0ff000</string>
+	</dict>
 	<key>modules</key>
 	<array>
 		<dict>
 			<key>name</key>
 			<string>contact</string>
+			<key>submodule</key>
+			<string>StoreViewController</string>
 			<key>email</key>
 			<string>info@omich.de</string>
+			<key>services</key>
+			<string>store,email,twitter,facebook</string>
 		</dict>
 		<dict>
 			<key>name</key>
 			<string>apps</string>
 			<key>URL</key>
 			<string>http://getallniceapps.com</string>
+			<key>appFile</key>
+			<string>apps.plist</string>
 		</dict>
 		<dict>
 			<key>name</key>
 			<string>about</string>
+			<key>file</key>
+			<string>about.html</string>
 		</dict>
 		<dict>
 			<key>name</key>

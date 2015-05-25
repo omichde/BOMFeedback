@@ -30,7 +30,7 @@
 - (void)viewDidLoad {
 	[super viewDidLoad];
 
-	[self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:self.setupDict[@"URL"]]]];
+	[self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:self.moduleConfig[@"URL"]]]];
 }
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView {

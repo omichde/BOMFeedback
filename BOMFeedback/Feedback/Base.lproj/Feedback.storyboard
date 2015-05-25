@@ -23,7 +23,6 @@
                                     <constraint firstAttribute="height" constant="50" id="pPW-UB-sjp"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="I Like this APP"/>
                                 <connections>
                                     <segue destination="lmy-a5-oJA" kind="show" id="FAu-4Y-7ko"/>
@@ -36,7 +35,6 @@
                                     <constraint firstAttribute="height" constant="50" id="m8G-y8-wDt"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="There is a problem..."/>
                                 <connections>
                                     <segue destination="gsP-ho-vdp" kind="show" id="pOW-4T-i0f"/>
@@ -77,93 +75,120 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Thank you" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="vjg-EP-myA">
-                                <rect key="frame" x="20" y="20" width="560" height="24"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fv8-Cu-tqM">
-                                <rect key="frame" x="-1" y="64" width="602" height="40"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E9y-SL-D8D">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0ci-A8-tQ9">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                        <subviews>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Thank you" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="vjg-EP-myA">
+                                                <rect key="frame" x="252" y="20" width="96" height="24"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fv8-Cu-tqM">
+                                                <rect key="frame" x="-1" y="54" width="602" height="40"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="e4S-95-0u8"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <state key="normal" title="Rate in APP store"/>
+                                                <connections>
+                                                    <action selector="appRank" destination="lmy-a5-oJA" eventType="touchUpInside" id="lh0-gR-Umo"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YeE-zu-J0e">
+                                                <rect key="frame" x="-1" y="104" width="602" height="40"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="2GH-lm-6NF"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <state key="normal" title="Recommend via email"/>
+                                                <connections>
+                                                    <action selector="email" destination="lmy-a5-oJA" eventType="touchUpInside" id="I9E-RL-4Ox"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sQ0-nQ-3qh">
+                                                <rect key="frame" x="-1" y="154" width="602" height="40"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="dse-0u-ohN"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <state key="normal" title="Share on Twitter"/>
+                                                <connections>
+                                                    <action selector="twitter" destination="lmy-a5-oJA" eventType="touchUpInside" id="BVx-bN-G7c"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HaR-S9-sn9">
+                                                <rect key="frame" x="-1" y="204" width="602" height="40"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="O0F-yW-0rY"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <state key="normal" title="Post to Facebook"/>
+                                                <connections>
+                                                    <action selector="facebook" destination="lmy-a5-oJA" eventType="touchUpInside" id="q5B-If-hDz"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="HaR-S9-sn9" firstAttribute="leading" secondItem="0ci-A8-tQ9" secondAttribute="leading" constant="-1" id="1Tu-WM-U1t"/>
+                                            <constraint firstItem="sQ0-nQ-3qh" firstAttribute="leading" secondItem="0ci-A8-tQ9" secondAttribute="leading" constant="-1" id="7fe-Nm-0CD"/>
+                                            <constraint firstItem="vjg-EP-myA" firstAttribute="top" secondItem="0ci-A8-tQ9" secondAttribute="top" constant="20" id="EXt-3j-zUI"/>
+                                            <constraint firstAttribute="trailing" secondItem="YeE-zu-J0e" secondAttribute="trailing" constant="-1" id="F81-jz-62W"/>
+                                            <constraint firstAttribute="trailing" secondItem="HaR-S9-sn9" secondAttribute="trailing" constant="-1" id="GLg-me-dR0"/>
+                                            <constraint firstItem="Fv8-Cu-tqM" firstAttribute="top" secondItem="vjg-EP-myA" secondAttribute="bottom" constant="10" id="JHb-Ab-X7u"/>
+                                            <constraint firstItem="sQ0-nQ-3qh" firstAttribute="top" secondItem="vjg-EP-myA" secondAttribute="bottom" constant="110" id="LMd-xd-FFK"/>
+                                            <constraint firstAttribute="trailing" secondItem="sQ0-nQ-3qh" secondAttribute="trailing" constant="-1" id="Vvd-Xa-jsg"/>
+                                            <constraint firstItem="Fv8-Cu-tqM" firstAttribute="leading" secondItem="0ci-A8-tQ9" secondAttribute="leading" constant="-1" id="Vw9-LC-xn4"/>
+                                            <constraint firstItem="vjg-EP-myA" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="0ci-A8-tQ9" secondAttribute="leading" constant="20" id="dBI-jX-L86"/>
+                                            <constraint firstItem="HaR-S9-sn9" firstAttribute="top" secondItem="vjg-EP-myA" secondAttribute="bottom" constant="160" id="fT5-An-QLM"/>
+                                            <constraint firstAttribute="centerX" secondItem="vjg-EP-myA" secondAttribute="centerX" id="kIq-by-Ipc"/>
+                                            <constraint firstAttribute="trailing" secondItem="Fv8-Cu-tqM" secondAttribute="trailing" constant="-1" id="kQy-Ag-LA4"/>
+                                            <constraint firstItem="YeE-zu-J0e" firstAttribute="top" secondItem="vjg-EP-myA" secondAttribute="bottom" constant="60" id="oFE-ev-XLD"/>
+                                            <constraint firstItem="YeE-zu-J0e" firstAttribute="leading" secondItem="0ci-A8-tQ9" secondAttribute="leading" constant="-1" id="vb7-vZ-GXE"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="vjg-EP-myA" secondAttribute="trailing" constant="20" id="xru-SB-vRW"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="e4S-95-0u8"/>
+                                    <constraint firstAttribute="bottom" secondItem="0ci-A8-tQ9" secondAttribute="bottom" id="6Y2-h4-vIO"/>
+                                    <constraint firstItem="0ci-A8-tQ9" firstAttribute="top" secondItem="E9y-SL-D8D" secondAttribute="top" id="Cg5-DI-HVe"/>
+                                    <constraint firstItem="0ci-A8-tQ9" firstAttribute="leading" secondItem="E9y-SL-D8D" secondAttribute="leading" id="Tf7-9e-Hqm"/>
+                                    <constraint firstAttribute="trailing" secondItem="0ci-A8-tQ9" secondAttribute="trailing" id="oXb-EK-yYj"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <state key="normal" title="Rate in APP store"/>
-                                <connections>
-                                    <action selector="appRank" destination="lmy-a5-oJA" eventType="touchUpInside" id="lh0-gR-Umo"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YeE-zu-J0e">
-                                <rect key="frame" x="-1" y="124" width="602" height="40"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="2GH-lm-6NF"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <state key="normal" title="Send an email"/>
-                                <connections>
-                                    <action selector="email" destination="lmy-a5-oJA" eventType="touchUpInside" id="I9E-RL-4Ox"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sQ0-nQ-3qh">
-                                <rect key="frame" x="-1" y="184" width="602" height="40"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="dse-0u-ohN"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <state key="normal" title="Comment on Twitter"/>
-                                <connections>
-                                    <action selector="twitter" destination="lmy-a5-oJA" eventType="touchUpInside" id="BVx-bN-G7c"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HaR-S9-sn9">
-                                <rect key="frame" x="-1" y="244" width="602" height="40"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="O0F-yW-0rY"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <state key="normal" title="Comment on Facebook"/>
-                                <connections>
-                                    <action selector="facebook" destination="lmy-a5-oJA" eventType="touchUpInside" id="q5B-If-hDz"/>
-                                </connections>
-                            </button>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="0.94819653159999995" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="sQ0-nQ-3qh" firstAttribute="top" secondItem="YeE-zu-J0e" secondAttribute="bottom" constant="20" id="5U9-Su-3kd"/>
-                            <constraint firstItem="HaR-S9-sn9" firstAttribute="top" secondItem="sQ0-nQ-3qh" secondAttribute="bottom" constant="20" id="5td-7h-WPn"/>
-                            <constraint firstAttribute="trailing" secondItem="vjg-EP-myA" secondAttribute="trailing" constant="20" id="6Lr-dU-emp"/>
-                            <constraint firstItem="Fv8-Cu-tqM" firstAttribute="top" secondItem="vjg-EP-myA" secondAttribute="bottom" constant="20" id="6wE-8Z-dIG"/>
-                            <constraint firstAttribute="trailing" secondItem="HaR-S9-sn9" secondAttribute="trailing" constant="-1" id="6zc-yh-gjn"/>
-                            <constraint firstItem="vjg-EP-myA" firstAttribute="leading" secondItem="6kS-Yo-Poe" secondAttribute="leading" constant="20" id="7Yc-vG-Crv"/>
-                            <constraint firstAttribute="trailing" secondItem="Fv8-Cu-tqM" secondAttribute="trailing" constant="-1" id="MOX-Jr-OKP"/>
-                            <constraint firstItem="sQ0-nQ-3qh" firstAttribute="leading" secondItem="6kS-Yo-Poe" secondAttribute="leading" constant="-1" id="MrI-1p-j1A"/>
-                            <constraint firstAttribute="trailing" secondItem="YeE-zu-J0e" secondAttribute="trailing" constant="-1" id="SmU-rD-dbw"/>
-                            <constraint firstItem="vjg-EP-myA" firstAttribute="top" secondItem="6kS-Yo-Poe" secondAttribute="top" constant="20" id="WZ1-zT-GV2"/>
-                            <constraint firstItem="YeE-zu-J0e" firstAttribute="leading" secondItem="6kS-Yo-Poe" secondAttribute="leading" constant="-1" id="YaB-T2-hzn"/>
-                            <constraint firstItem="YeE-zu-J0e" firstAttribute="top" secondItem="Fv8-Cu-tqM" secondAttribute="bottom" constant="20" id="de8-zs-zFZ"/>
-                            <constraint firstAttribute="trailing" secondItem="sQ0-nQ-3qh" secondAttribute="trailing" constant="-1" id="jSe-rY-j28"/>
-                            <constraint firstItem="Fv8-Cu-tqM" firstAttribute="leading" secondItem="6kS-Yo-Poe" secondAttribute="leading" constant="-1" id="lSe-Hr-Q0l"/>
-                            <constraint firstItem="HaR-S9-sn9" firstAttribute="leading" secondItem="6kS-Yo-Poe" secondAttribute="leading" constant="-1" id="lnw-Lg-dbH"/>
+                            <constraint firstAttribute="trailing" secondItem="E9y-SL-D8D" secondAttribute="trailing" id="8RL-36-tgR"/>
+                            <constraint firstAttribute="height" secondItem="0ci-A8-tQ9" secondAttribute="height" id="Cd8-k7-fyl"/>
+                            <constraint firstItem="E9y-SL-D8D" firstAttribute="leading" secondItem="6kS-Yo-Poe" secondAttribute="leading" id="N5o-8e-Mcr"/>
+                            <constraint firstItem="E9y-SL-D8D" firstAttribute="top" secondItem="6kS-Yo-Poe" secondAttribute="top" id="eik-ad-epc"/>
+                            <constraint firstAttribute="bottom" secondItem="E9y-SL-D8D" secondAttribute="bottom" id="sIt-Uc-3q0"/>
+                            <constraint firstAttribute="width" secondItem="0ci-A8-tQ9" secondAttribute="width" id="uZh-1g-7fJ"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <connections>
-                        <outlet property="emailButton" destination="YeE-zu-J0e" id="T7t-Ab-X9Z"/>
-                        <outlet property="facebookButton" destination="HaR-S9-sn9" id="OFA-9H-jfR"/>
-                        <outlet property="rateButton" destination="Fv8-Cu-tqM" id="WEf-oN-fcC"/>
-                        <outlet property="twitterButton" destination="sQ0-nQ-3qh" id="gWM-b5-fiQ"/>
                         <outletCollection property="framedViews" destination="Fv8-Cu-tqM" id="AH8-xS-jiL"/>
                         <outletCollection property="framedViews" destination="YeE-zu-J0e" id="gna-eI-36x"/>
                         <outletCollection property="framedViews" destination="sQ0-nQ-3qh" id="D3x-ln-nKR"/>
                         <outletCollection property="framedViews" destination="HaR-S9-sn9" id="mKW-5f-YyD"/>
+                        <outletCollection property="servicesConstraints" destination="JHb-Ab-X7u" id="f3v-Cj-XbJ"/>
+                        <outletCollection property="servicesConstraints" destination="oFE-ev-XLD" id="ORm-rc-izo"/>
+                        <outletCollection property="servicesConstraints" destination="LMd-xd-FFK" id="RhZ-4n-FJ0"/>
+                        <outletCollection property="servicesConstraints" destination="fT5-An-QLM" id="Cta-uI-SbR"/>
+                        <outletCollection property="servicesButtons" destination="Fv8-Cu-tqM" id="6x6-KJ-ARc"/>
+                        <outletCollection property="servicesButtons" destination="YeE-zu-J0e" id="b9w-K2-ErK"/>
+                        <outletCollection property="servicesButtons" destination="sQ0-nQ-3qh" id="Lnp-Kt-XwR"/>
+                        <outletCollection property="servicesButtons" destination="HaR-S9-sn9" id="3uw-m1-wGf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XT8-NQ-OaD" userLabel="First Responder" sceneMemberID="firstResponder"/>

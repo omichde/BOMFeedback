@@ -14,11 +14,8 @@
 
 @interface LikeFeedbackViewController () <MFMailComposeViewControllerDelegate>
 
-@property (weak, nonatomic) IBOutlet UIButton *rateButton;
-@property (weak, nonatomic) IBOutlet UIButton *emailButton;
-@property (weak, nonatomic) IBOutlet UIButton *twitterButton;
-@property (weak, nonatomic) IBOutlet UIButton *facebookButton;
-@property (nonatomic) NSDictionary *config;
+@property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *servicesButtons;
+@property (strong, nonatomic) IBOutletCollection(NSLayoutConstraint) NSArray *servicesConstraints;
 
 @end
 
@@ -27,20 +24,33 @@
 - (void)viewDidLoad {
 	[super viewDidLoad];
 
-	self.config = [[NSDictionary alloc] initWithContentsOfFile: [[NSBundle mainBundle] pathForResource:@"Feedback" ofType:@"plist"]];
-	[self.rateButton feedbackPrependTextWithIcon:IFStarFilled color:[UIColor redColor]];
-	[self.emailButton feedbackPrependTextWithIcon:IFMailFilled color:[UIColor lightGrayColor]];
-	[self.twitterButton feedbackPrependTextWithIcon:IFTwitter color:[UIColor colorWithRed:0.000 green:0.502 blue:1.000 alpha:1.000]];
-	[self.facebookButton feedbackPrependTextWithIcon:IFFacebook color:[UIColor colorWithRed:0.176 green:0.267 blue:0.525 alpha:1.000]];
+	[self.servicesButtons[0] feedbackPrependTextWithIcon:IFStarFilled color:[UIColor redColor]];
+	[self.servicesButtons[1] feedbackPrependTextWithIcon:IFMailFilled color:[UIColor lightGrayColor]];
+	[self.servicesButtons[2] feedbackPrependTextWithIcon:IFTwitter color:[UIColor colorWithRed:0.000 green:0.502 blue:1.000 alpha:1.000]];
+	[self.servicesButtons[3] feedbackPrependTextWithIcon:IFFacebook color:[UIColor colorWithRed:0.176 green:0.267 blue:0.525 alpha:1.000]];
+
+	if (self.moduleConfig[@"services"]) {
+		NSArray *services = [self.moduleConfig[@"services"] componentsSeparatedByString:@","];
+		NSArray *tokens = @[@"store", @"email", @"twitter", @"facebook"];
+		CGFloat __block pos = ((NSLayoutConstraint*)self.servicesConstraints[0]).constant;
+		[tokens enumerateObjectsUsingBlock:^(NSString *token, NSUInteger idx, BOOL *stop) {
+			if ([services containsObject:token]) {
+				((NSLayoutConstraint*)self.servicesConstraints[idx]).constant = pos;
+				pos += 50;
+			}
+			else
+				((UIButton*)self.servicesButtons[idx]).hidden = YES;
+		}];
+	}
 }
 
 - (IBAction) appRank {
 	NSURL *url;
 	float iOSVersion = [UIDevice currentDevice].systemVersion.floatValue;
 	if (iOSVersion >= 7. && iOSVersion < 7.1)
-		url = [NSURL URLWithString:[NSString stringWithFormat:@"itms-apps://itunes.apple.com/app/id%@", self.config[@"APPId"]]];
+		url = [NSURL URLWithString:[NSString stringWithFormat:@"itms-apps://itunes.apple.com/app/id%@", self.feedbackConfig[@"APPId"]]];
 	else
-		url = [NSURL URLWithString:[NSString stringWithFormat:@"itms-apps://itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?type=Purple+Software&id=%@", self.config[@"APPId"]]];
+		url = [NSURL URLWithString:[NSString stringWithFormat:@"itms-apps://itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?type=Purple+Software&id=%@", self.feedbackConfig[@"APPId"]]];
 	[[UIApplication sharedApplication] openURL: url];
 }
 

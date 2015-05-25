@@ -10,7 +10,8 @@
 
 @interface AbstractFeedbackViewController : UIViewController
 
-@property (nonatomic) NSDictionary *setupDict;
+@property (nonatomic) NSDictionary *feedbackConfig;
+@property (nonatomic) NSDictionary *moduleConfig;
 @property (nonatomic) IBOutletCollection(UIButton) NSArray *framedViews;
 
 @end

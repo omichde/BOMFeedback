@@ -171,11 +171,11 @@
 		DE7845B81B120F86003B21B7 /* BOMFeedback */ = {
 			isa = PBXGroup;
 			children = (
-				DE7845EA1B1211A3003B21B7 /* about.html */,
-				DE7845BA1B120F86003B21B7 /* Feedback */,
 				DE7845D11B120F86003B21B7 /* Feedback.plist */,
+				DE7845EA1B1211A3003B21B7 /* about.html */,
 				DE7845E61B12117A003B21B7 /* FeedbackFAQ.plist */,
 				DE7845ED1B1211AD003B21B7 /* FeedbackLocalizable.strings */,
+				DE7845BA1B120F86003B21B7 /* Feedback */,
 			);
 			path = BOMFeedback;
 			sourceTree = SOURCE_ROOT;
@@ -186,10 +186,10 @@
 				DE7845F61B121284003B21B7 /* Feedback.storyboard */,
 				DE7845C71B120F86003B21B7 /* FeedbackController.h */,
 				DE7845C81B120F86003B21B7 /* FeedbackController.m */,
-				DE7845BB1B120F86003B21B7 /* AboutFeedbackViewController.h */,
-				DE7845BC1B120F86003B21B7 /* AboutFeedbackViewController.m */,
 				DE7845BD1B120F86003B21B7 /* AbstractFeedbackViewController.h */,
 				DE7845BE1B120F86003B21B7 /* AbstractFeedbackViewController.m */,
+				DE7845BB1B120F86003B21B7 /* AboutFeedbackViewController.h */,
+				DE7845BC1B120F86003B21B7 /* AboutFeedbackViewController.m */,
 				DE7845BF1B120F86003B21B7 /* AppsFeedbackViewController.h */,
 				DE7845C01B120F86003B21B7 /* AppsFeedbackViewController.m */,
 				DE7845C11B120F86003B21B7 /* ContactFeedbackViewController.h */,

@@ -16,7 +16,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *emailButton;
 @property (assign, nonatomic) NSInteger currentRow;
 @property (strong, nonatomic) NSArray *faqList;
-@property (nonatomic) NSDictionary *config;
 
 @end
 
@@ -25,20 +24,19 @@
 - (void)viewDidLoad {
 	[super viewDidLoad];
 
-	self.config = [[NSDictionary alloc] initWithContentsOfFile: [[NSBundle mainBundle] pathForResource:@"Feedback" ofType:@"plist"]];
 	self.faqList = [[NSArray alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"FeedbackFAQ" ofType:@"plist"]];
 
 	self.currentRow = -1;
-	[self.emailButton setTitle:self.setupDict[@"email"] forState:UIControlStateNormal];
+	[self.emailButton setTitle:self.moduleConfig[@"email"] forState:UIControlStateNormal];
 }
 
 - (IBAction) email {
 	MFMailComposeViewController *emailPicker = [[MFMailComposeViewController alloc] init];
 	emailPicker.navigationBar.tintColor = self.view.tintColor;
 	emailPicker.mailComposeDelegate = self;
-	[emailPicker setToRecipients:@[self.setupDict[@"email"]]];
+	[emailPicker setToRecipients:@[self.moduleConfig[@"email"]]];
 	emailPicker.subject = FeedbackLocalizedString(@"Report-Subject");
-	[emailPicker setMessageBody:[NSString stringWithFormat:FeedbackLocalizedString(@"Report-Template"), self.config[@"ITMSURL"], [[NSBundle mainBundle] infoDictionary][@"CFBundleShortVersionString"], [[NSLocale currentLocale] localeIdentifier], [[UIDevice currentDevice] localizedModel], [[UIDevice currentDevice] systemVersion]] isHTML:NO];
+	[emailPicker setMessageBody:[NSString stringWithFormat:FeedbackLocalizedString(@"Report-Template"), self.feedbackConfig[@"ITMSURL"], [[NSBundle mainBundle] infoDictionary][@"CFBundleShortVersionString"], [[NSLocale currentLocale] localeIdentifier], [[UIDevice currentDevice] localizedModel], [[UIDevice currentDevice] systemVersion]] isHTML:NO];
 	[self presentViewController:emailPicker animated:YES completion:nil];
 }
 

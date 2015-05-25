@@ -30,16 +30,19 @@
 #endif
 		return;
 	}
+	NSMutableDictionary *feedbackConfig = [config mutableCopy];
+	[feedbackConfig removeObjectForKey:@"modules"];
 
 	UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Feedback" bundle:nil];
 	NSMutableArray *viewControllers = [@[] mutableCopy];
-	for (NSDictionary *module in config[@"modules"]) {
-		NSString *controllerName = [NSString stringWithFormat:@"%@FeedbackViewController", [module[@"name"] capitalizedString]];
+	for (NSDictionary *moduleConfig in config[@"modules"]) {
+		NSString *controllerName = [NSString stringWithFormat:@"%@FeedbackViewController", [moduleConfig[@"name"] capitalizedString]];
 		AbstractFeedbackViewController *viewController = [storyboard instantiateViewControllerWithIdentifier:controllerName];
 		if (viewController) {
 			UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
 			navigationController.view.backgroundColor = [UIColor whiteColor];
-			viewController.setupDict = module;
+			viewController.feedbackConfig = feedbackConfig;
+			viewController.moduleConfig = moduleConfig;
 			[viewControllers addObject:navigationController];
 		}
 	}

@@ -25,7 +25,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-	return ((NSArray*)self.setupDict[@"files"]).count;
+	return ((NSArray*)self.moduleConfig[@"files"]).count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -33,7 +33,7 @@
 	if (!cell)
 		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"ModulesCell"];
 
-	NSString *fileName = ((NSArray*)self.setupDict[@"files"])[indexPath.row];
+	NSString *fileName = ((NSArray*)self.moduleConfig[@"files"])[indexPath.row];
 	fileName = [fileName substringToIndex:fileName.length - (fileName.pathExtension.length+1)];
 	cell.textLabel.text = fileName;
 
@@ -42,7 +42,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	[tableView deselectRowAtIndexPath:indexPath animated:YES];
-	NSString *fileName = ((NSArray*)self.setupDict[@"files"])[indexPath.row];
+	NSString *fileName = ((NSArray*)self.moduleConfig[@"files"])[indexPath.row];
 	NSString *fileExtension = fileName.pathExtension;
 	fileName = [fileName substringToIndex:fileName.length - (fileName.pathExtension.length+1)];
 	NSString *filePath = [[NSBundle mainBundle] pathForResource:fileName ofType:fileExtension];
