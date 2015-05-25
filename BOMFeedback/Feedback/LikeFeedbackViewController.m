@@ -35,7 +35,12 @@
 }
 
 - (IBAction) appRank {
-	NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"itms-apps://itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?type=Purple+Software&id=%@", self.config[@"APPId"]]];
+	NSURL *url;
+	float iOSVersion = [UIDevice currentDevice].systemVersion.floatValue;
+	if (iOSVersion >= 7. && iOSVersion < 7.1)
+		url = [NSURL URLWithString:[NSString stringWithFormat:@"itms-apps://itunes.apple.com/app/id%@", self.config[@"APPId"]]];
+	else
+		url = [NSURL URLWithString:[NSString stringWithFormat:@"itms-apps://itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?type=Purple+Software&id=%@", self.config[@"APPId"]]];
 	[[UIApplication sharedApplication] openURL: url];
 }
 
