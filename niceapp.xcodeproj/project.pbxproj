@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE4FAB1E1B146795002D6391 /* FeedbackThanks.sks in Resources */ = {isa = PBXBuildFile; fileRef = DE4FAB1C1B146795002D6391 /* FeedbackThanks.sks */; };
+		DE4FAB211B1467A1002D6391 /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = DE4FAB201B1467A1002D6391 /* star.png */; };
+		DE4FAB8E1B1471D1002D6391 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE4FAB8D1B1471D1002D6391 /* SpriteKit.framework */; };
+		DE4FAB911B147478002D6391 /* FeedbackThanks.m in Sources */ = {isa = PBXBuildFile; fileRef = DE4FAB901B147478002D6391 /* FeedbackThanks.m */; };
 		DE78456D1B120E8F003B21B7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DE78456C1B120E8F003B21B7 /* main.m */; };
 		DE7845701B120E8F003B21B7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DE78456F1B120E8F003B21B7 /* AppDelegate.m */; };
 		DE7845731B120E8F003B21B7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE7845721B120E8F003B21B7 /* ViewController.m */; };
@@ -43,6 +47,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DE4FAB1C1B146795002D6391 /* FeedbackThanks.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = FeedbackThanks.sks; sourceTree = "<group>"; };
+		DE4FAB201B1467A1002D6391 /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star.png; sourceTree = "<group>"; };
+		DE4FAB8D1B1471D1002D6391 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
+		DE4FAB8F1B147478002D6391 /* FeedbackThanks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedbackThanks.h; sourceTree = "<group>"; };
+		DE4FAB901B147478002D6391 /* FeedbackThanks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedbackThanks.m; sourceTree = "<group>"; };
 		DE7845671B120E8F003B21B7 /* niceapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = niceapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE78456B1B120E8F003B21B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE78456C1B120E8F003B21B7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -95,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE4FAB8E1B1471D1002D6391 /* SpriteKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,6 +121,7 @@
 		DE78455E1B120E8F003B21B7 = {
 			isa = PBXGroup;
 			children = (
+				DE4FAB8D1B1471D1002D6391 /* SpriteKit.framework */,
 				DE7845691B120E8F003B21B7 /* niceapp */,
 				DE7845831B120E8F003B21B7 /* niceappTests */,
 				DE7845681B120E8F003B21B7 /* Products */,
@@ -184,8 +195,15 @@
 			isa = PBXGroup;
 			children = (
 				DE7845F61B121284003B21B7 /* Feedback.storyboard */,
+				DE4FAB1C1B146795002D6391 /* FeedbackThanks.sks */,
+				DE4FAB8F1B147478002D6391 /* FeedbackThanks.h */,
+				DE4FAB901B147478002D6391 /* FeedbackThanks.m */,
+				DE4FAB201B1467A1002D6391 /* star.png */,
 				DE7845C71B120F86003B21B7 /* FeedbackController.h */,
 				DE7845C81B120F86003B21B7 /* FeedbackController.m */,
+				DE7845C51B120F86003B21B7 /* Feedback-Regular.otf */,
+				DE7845C91B120F86003B21B7 /* FeedbackIconFont.h */,
+				DE7845CA1B120F86003B21B7 /* FeedbackIconFont.m */,
 				DE7845BD1B120F86003B21B7 /* AbstractFeedbackViewController.h */,
 				DE7845BE1B120F86003B21B7 /* AbstractFeedbackViewController.m */,
 				DE7845BB1B120F86003B21B7 /* AboutFeedbackViewController.h */,
@@ -196,9 +214,6 @@
 				DE7845C21B120F86003B21B7 /* ContactFeedbackViewController.m */,
 				DE7845C31B120F86003B21B7 /* DislikeFeedbackViewController.h */,
 				DE7845C41B120F86003B21B7 /* DislikeFeedbackViewController.m */,
-				DE7845C51B120F86003B21B7 /* Feedback-Regular.otf */,
-				DE7845C91B120F86003B21B7 /* FeedbackIconFont.h */,
-				DE7845CA1B120F86003B21B7 /* FeedbackIconFont.m */,
 				DE7845CB1B120F86003B21B7 /* LikeFeedbackViewController.h */,
 				DE7845CC1B120F86003B21B7 /* LikeFeedbackViewController.m */,
 				DE7845CD1B120F86003B21B7 /* ModulesFeedbackViewController.h */,
@@ -294,12 +309,14 @@
 				DE7845E41B12117A003B21B7 /* FeedbackFAQ.plist in Resources */,
 				DE7845E81B1211A3003B21B7 /* about.html in Resources */,
 				DE7845761B120E8F003B21B7 /* Main.storyboard in Resources */,
+				DE4FAB211B1467A1002D6391 /* star.png in Resources */,
 				DE7845DA1B120F86003B21B7 /* Feedback-Regular.otf in Resources */,
 				DE7845EB1B1211AD003B21B7 /* FeedbackLocalizable.strings in Resources */,
 				DE78457B1B120E8F003B21B7 /* LaunchScreen.xib in Resources */,
 				DE7845781B120E8F003B21B7 /* Images.xcassets in Resources */,
 				DE7845E11B120F86003B21B7 /* Feedback.plist in Resources */,
 				DE7845F71B121294003B21B7 /* Feedback.storyboard in Resources */,
+				DE4FAB1E1B146795002D6391 /* FeedbackThanks.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,6 +343,7 @@
 				DE7845DC1B120F86003B21B7 /* FeedbackController.m in Sources */,
 				DE7845D81B120F86003B21B7 /* ContactFeedbackViewController.m in Sources */,
 				DE7845D51B120F86003B21B7 /* AboutFeedbackViewController.m in Sources */,
+				DE4FAB911B147478002D6391 /* FeedbackThanks.m in Sources */,
 				DE7845E01B120F86003B21B7 /* ModulFeedbackViewController.m in Sources */,
 				DE7845D61B120F86003B21B7 /* AbstractFeedbackViewController.m in Sources */,
 				DE7845DD1B120F86003B21B7 /* FeedbackIconFont.m in Sources */,

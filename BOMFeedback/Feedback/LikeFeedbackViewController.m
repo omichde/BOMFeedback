@@ -10,10 +10,13 @@
 #import <MessageUI/MessageUI.h>
 #import <MessageUI/MFMailComposeViewController.h>
 #import <Social/Social.h>
+#import <SpriteKit/SpriteKit.h>
+#import "FeedbackThanks.h"
 #import "FeedbackController.h"
 
 @interface LikeFeedbackViewController () <MFMailComposeViewControllerDelegate>
 
+@property (weak, nonatomic) IBOutlet SKView *thanksView;
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *servicesButtons;
 @property (strong, nonatomic) IBOutletCollection(NSLayoutConstraint) NSArray *servicesConstraints;
 
@@ -42,6 +45,15 @@
 				((UIButton*)self.servicesButtons[idx]).hidden = YES;
 		}];
 	}
+
+	SKScene *scene = [SKScene sceneWithSize:self.thanksView.bounds.size];
+	scene.backgroundColor = [UIColor colorWithWhite:0.948 alpha:1.000];
+	scene.scaleMode = SKSceneScaleModeAspectFit;
+	SKEmitterNode *starNode = [SKEmitterNode nodeWithFileNamed:@"FeedbackThanks.sks"];
+	starNode.position = CGPointMake(CGRectGetMidX(self.thanksView.bounds), CGRectGetMaxY(self.thanksView.bounds) * 0.3);
+	starNode.particlePositionRange = CGVectorMake(CGRectGetWidth(self.thanksView.bounds) * 0.8, 0);
+	[scene addChild: starNode];
+	[self.thanksView presentScene:scene];
 }
 
 - (IBAction) appRank {
