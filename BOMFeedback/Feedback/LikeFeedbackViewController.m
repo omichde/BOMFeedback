@@ -11,7 +11,6 @@
 #import <MessageUI/MFMailComposeViewController.h>
 #import <Social/Social.h>
 #import <SpriteKit/SpriteKit.h>
-#import "FeedbackThanks.h"
 #import "FeedbackController.h"
 
 @interface LikeFeedbackViewController () <MFMailComposeViewControllerDelegate>
@@ -46,12 +45,14 @@
 		}];
 	}
 
+	// just for the fun of it...
+	SKEmitterNode *starNode = [SKEmitterNode nodeWithFileNamed:@"FeedbackStar"];
+	starNode.particleTexture = [SKTexture textureWithImage:[UIImage feedbackIconImage:IFStarFilled fontSize:50 fontColor:[UIColor whiteColor] forSize:CGSizeMake(50, 50)]];
+	starNode.position = CGPointMake(CGRectGetMidX(self.thanksView.bounds), CGRectGetMaxY(self.thanksView.bounds) * 0.3);
+	starNode.particlePositionRange = CGVectorMake(CGRectGetWidth(self.thanksView.bounds) * 0.8, 10);
 	SKScene *scene = [SKScene sceneWithSize:self.thanksView.bounds.size];
 	scene.backgroundColor = [UIColor colorWithWhite:0.948 alpha:1.000];
 	scene.scaleMode = SKSceneScaleModeAspectFit;
-	SKEmitterNode *starNode = [SKEmitterNode nodeWithFileNamed:@"FeedbackThanks.sks"];
-	starNode.position = CGPointMake(CGRectGetMidX(self.thanksView.bounds), CGRectGetMaxY(self.thanksView.bounds) * 0.3);
-	starNode.particlePositionRange = CGVectorMake(CGRectGetWidth(self.thanksView.bounds) * 0.8, 0);
 	[scene addChild: starNode];
 	[self.thanksView presentScene:scene];
 }
