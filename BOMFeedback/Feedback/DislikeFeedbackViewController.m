@@ -87,6 +87,9 @@
 		cell.textLabel.numberOfLines = 0;
 		cell.textLabel.lineBreakMode = NSLineBreakByWordWrapping;
 		cell.textLabel.font = [UIFont systemFontOfSize:[UIFont systemFontSize]];
+		cell.selectionStyle = UITableViewCellSelectionStyleGray;
+		cell.selectedBackgroundView = [[UIView alloc] initWithFrame:cell.bounds];
+		cell.selectedBackgroundView.backgroundColor = [UIColor colorWithWhite:0.8 alpha:1];
 	}
 
 	cell.userInteractionEnabled = YES;

@@ -26,7 +26,7 @@
 		if ([self.feedbackConfig[@"darkMode"] boolValue])
 			view.layer.borderColor = [UIColor colorWithWhite:0.2 alpha:1].CGColor;
 		else
-			view.layer.borderColor = [UIColor colorWithWhite:0.9 alpha:1].CGColor;
+			view.layer.borderColor = [UIColor colorWithWhite:0.9 alpha:1.000].CGColor;
 		view.layer.borderWidth = 1. / [UIScreen mainScreen].scale;
 		view.tintColor = self.tabBarController.view.tintColor;	// propagate tintColor
 	}

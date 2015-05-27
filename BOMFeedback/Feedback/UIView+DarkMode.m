@@ -28,6 +28,26 @@
 
 @end
 
+@implementation UITableViewCell (DarkMode)
+
+- (void) setupDarkMode {
+	[super setupDarkMode];
+
+	self.selectedBackgroundView.backgroundColor = [self.selectedBackgroundView.backgroundColor darkModeBackColor];
+}
+
+@end
+
+@implementation UITableView (DarkMode)
+
+- (void) setupDarkMode {
+	[super setupDarkMode];
+	
+	self.separatorColor = [self.separatorColor darkModeBackColor];
+}
+
+@end
+
 @implementation UITabBar (DarkMode)
 
 - (void) setupDarkMode {
@@ -56,7 +76,7 @@
 - (UIColor*)darkModeBackColor {
 	CGFloat white, alpha;
 	[self getWhite:&white alpha:&alpha];
-	return [UIColor colorWithWhite: (white < 0.5 ? white : 1. - 2. * white) alpha:alpha];
+	return [UIColor colorWithWhite: (white < 0.5 ? white : 2. * (1. - white)) alpha:alpha];
 }
 
 - (UIColor*)darkModeFrontColor {
