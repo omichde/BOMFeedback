@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>BE8F5A82-7353-454A-A42A-A6BDF16D7756</string>
+	<key>IDESourceControlProjectName</key>
+	<string>niceapp</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>5ADF88023EA17BF53103C30070F36DB0F90C2745</key>
+		<string>https://github.com/omichde/BOMFeedback.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>niceapp.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>5ADF88023EA17BF53103C30070F36DB0F90C2745</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/omichde/BOMFeedback.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>5ADF88023EA17BF53103C30070F36DB0F90C2745</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>5ADF88023EA17BF53103C30070F36DB0F90C2745</string>
+			<key>IDESourceControlWCCName</key>
+			<string>BOMFeedback</string>
+		</dict>
+	</array>
+</dict>
+</plist>

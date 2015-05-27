@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DE4FAB8E1B1471D1002D6391 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE4FAB8D1B1471D1002D6391 /* SpriteKit.framework */; };
 		DE78456D1B120E8F003B21B7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DE78456C1B120E8F003B21B7 /* main.m */; };
 		DE7845701B120E8F003B21B7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DE78456F1B120E8F003B21B7 /* AppDelegate.m */; };
 		DE7845731B120E8F003B21B7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE7845721B120E8F003B21B7 /* ViewController.m */; };
@@ -50,7 +49,6 @@
 
 /* Begin PBXFileReference section */
 		DE4FAB1C1B146795002D6391 /* FeedbackStar.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = FeedbackStar.sks; sourceTree = "<group>"; };
-		DE4FAB8D1B1471D1002D6391 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
 		DE7845671B120E8F003B21B7 /* niceapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = niceapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE78456B1B120E8F003B21B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE78456C1B120E8F003B21B7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -108,7 +106,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE4FAB8E1B1471D1002D6391 /* SpriteKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,7 +122,6 @@
 		DE78455E1B120E8F003B21B7 = {
 			isa = PBXGroup;
 			children = (
-				DE4FAB8D1B1471D1002D6391 /* SpriteKit.framework */,
 				DE7845691B120E8F003B21B7 /* niceapp */,
 				DE7845831B120E8F003B21B7 /* niceappTests */,
 				DE7845681B120E8F003B21B7 /* Products */,
