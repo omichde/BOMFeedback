@@ -31,11 +31,12 @@
 	[super viewDidLoad];
 
 	[self.likeButton feedbackPrependTextWithIcon:IFHeartFilled color:[UIColor redColor]];
-	[self.dislikeButton feedbackPrependTextWithIcon:IFBubbleFilled color:[UIColor colorWithRed:0.000 green:0.000 blue:0.502 alpha:1.000]];
+	[self.dislikeButton feedbackPrependTextWithIcon:IFBubbleFilled color:[UIColor colorWithRed:0.000 green:0.000 blue:0.5 alpha:1.000]];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
 	AbstractFeedbackViewController *feedbackViewController = segue.destinationViewController;
+	feedbackViewController.feedbackConfig = self.feedbackConfig;
 	feedbackViewController.moduleConfig = self.moduleConfig;
 }
 

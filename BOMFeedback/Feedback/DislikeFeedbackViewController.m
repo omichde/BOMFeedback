@@ -10,6 +10,7 @@
 #import <MessageUI/MessageUI.h>
 #import <MessageUI/MFMailComposeViewController.h>
 #import "FeedbackController.h"
+#import "UIView+DarkMode.h"
 
 @interface DislikeFeedbackViewController () <MFMailComposeViewControllerDelegate, UITableViewDelegate, UITableViewDataSource>
 
@@ -107,6 +108,8 @@
 		cell.backgroundColor = [UIColor whiteColor];
 	else
 		cell.backgroundColor = [UIColor colorWithWhite:0.9 alpha:1.];
+	if ([self.feedbackConfig[@"darkMode"] boolValue])
+		[cell setupDarkMode];
 }
 
 - (void) tableView:(UITableView*) tableView didSelectRowAtIndexPath:(NSIndexPath*) indexPath {

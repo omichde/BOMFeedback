@@ -8,15 +8,8 @@
 	<string>http://itunes.apple.com/de/app/id12345678?mt=8</string>
 	<key>WebURL</key>
 	<string>http://getniceapp.com</string>
-	<key>colors</key>
-	<dict>
-		<key>text</key>
-		<string>0x00ff00</string>
-		<key>viewBackground</key>
-		<string>0xff0000</string>
-		<key>buttonBackground</key>
-		<string>0x0ff000</string>
-	</dict>
+	<key>darkMode</key>
+	<true/>
 	<key>modules</key>
 	<array>
 		<dict>
@@ -41,16 +34,16 @@
 			<key>name</key>
 			<string>about</string>
 			<key>file</key>
-			<string>about.html</string>
+			<string>feedbackAbout.html</string>
 		</dict>
 		<dict>
 			<key>name</key>
 			<string>modules</string>
 			<key>files</key>
 			<array>
-				<string>Paket1.rtf</string>
-				<string>Paket2.html</string>
-				<string>Paket3.pdf</string>
+				<string>Package1.rtf</string>
+				<string>Package2.html</string>
+				<string>Package3.pdf</string>
 			</array>
 		</dict>
 	</array>

@@ -12,6 +12,7 @@
 #import <Social/Social.h>
 #import <SpriteKit/SpriteKit.h>
 #import "FeedbackController.h"
+#import "UIView+DarkMode.h"
 
 @interface LikeFeedbackViewController () <MFMailComposeViewControllerDelegate>
 
@@ -51,7 +52,10 @@
 	starNode.position = CGPointMake(CGRectGetMidX(self.thanksView.bounds), CGRectGetMaxY(self.thanksView.bounds) * 0.3);
 	starNode.particlePositionRange = CGVectorMake(CGRectGetWidth(self.thanksView.bounds) * 0.8, 10);
 	SKScene *scene = [SKScene sceneWithSize:self.thanksView.bounds.size];
-	scene.backgroundColor = [UIColor colorWithWhite:0.948 alpha:1.000];
+	scene.backgroundColor = [UIColor colorWithWhite:0.95 alpha:1.000];
+	if ([self.feedbackConfig[@"darkMode"] boolValue])
+		scene.backgroundColor = [scene.backgroundColor darkModeBackColor];
+
 	scene.scaleMode = SKSceneScaleModeAspectFit;
 	[scene addChild: starNode];
 	[self.thanksView presentScene:scene];

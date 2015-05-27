@@ -8,6 +8,7 @@
 
 #import "FeedbackController.h"
 #import "AbstractFeedbackViewController.h"
+#import "UIView+DarkMode.h"
 
 @interface FeedbackController ()
 
@@ -32,6 +33,9 @@
 	}
 	NSMutableDictionary *feedbackConfig = [config mutableCopy];
 	[feedbackConfig removeObjectForKey:@"modules"];
+	
+	if ([feedbackConfig[@"darkMode"] boolValue])
+		[self.tabBar setupDarkMode];
 
 	UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Feedback" bundle:nil];
 	NSMutableArray *viewControllers = [@[] mutableCopy];
@@ -40,7 +44,13 @@
 		AbstractFeedbackViewController *viewController = [storyboard instantiateViewControllerWithIdentifier:controllerName];
 		if (viewController) {
 			UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
-			navigationController.view.backgroundColor = [UIColor whiteColor];
+			if ([feedbackConfig[@"darkMode"] boolValue]) {
+				navigationController.navigationBar.barStyle = UIBarStyleBlack;
+				navigationController.view.backgroundColor = [UIColor blackColor];
+			}
+			else {
+				navigationController.view.backgroundColor = [UIColor whiteColor];
+			}
 			viewController.feedbackConfig = feedbackConfig;
 			viewController.moduleConfig = moduleConfig;
 			[viewControllers addObject:navigationController];

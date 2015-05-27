@@ -83,12 +83,6 @@ extern CGFloat const IFBarButtonIconFontSize;
 @interface UIImage (FeedbackIconFont)
 
 + (UIImage*) feedbackIconTabBarImage:(NSString*)token;
-+ (UIImage*) feedbackIconImage:(NSString*)token fontSize:(CGFloat)fontSize fontColor:(UIColor*)fontColor forSize:(CGSize)boxSize;
-
-@end
-
-@interface NSAttributedString (FeedbackIconFont)
-
-+ (NSAttributedString*) feedbackIcon:(NSString*)token forString:(NSAttributedString*)text color:(UIColor*)color;
++ (UIImage*) feedbackIconImage:(NSString*)token fontSize:(CGFloat)fontSize fontColor:(UIColor*) fontColor forSize:(CGSize)boxSize;
 
 @end

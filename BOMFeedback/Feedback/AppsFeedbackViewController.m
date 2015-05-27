@@ -30,6 +30,9 @@
 - (void)viewDidLoad {
 	[super viewDidLoad];
 
+	if ([self.feedbackConfig[@"darkMode"] boolValue])
+		self.busyView.activityIndicatorViewStyle = UIActivityIndicatorViewStyleWhite;
+
 	[self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:self.moduleConfig[@"URL"]]]];
 }
 
