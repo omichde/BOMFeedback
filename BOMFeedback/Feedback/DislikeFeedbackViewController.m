@@ -25,7 +25,16 @@
 - (void)viewDidLoad {
 	[super viewDidLoad];
 
-	self.faqList = [[NSArray alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"FeedbackFAQ" ofType:@"plist"]];
+	NSString *fileName = self.moduleConfig[@"faq"][@"file"];
+	if (fileName) {
+		NSString *extension = fileName.pathExtension;
+		fileName = [fileName substringToIndex:fileName.length - (extension.length+1)];
+		self.faqList = [[NSArray alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:fileName ofType:extension]];
+	}
+	else {
+		NSString *fileName = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES).firstObject stringByAppendingString:FeedbackFAQPList];
+		self.faqList = [[NSArray alloc] initWithContentsOfFile:fileName];
+	}
 
 	self.currentRow = -1;
 	[self.emailButton setTitle:self.moduleConfig[@"email"] forState:UIControlStateNormal];

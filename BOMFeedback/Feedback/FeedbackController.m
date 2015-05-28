@@ -12,6 +12,8 @@
 
 @interface FeedbackController ()
 
+@property (nonatomic) NSDictionary *feedbackConfig;
+@property (assign, nonatomic) BOOL isUpdatingFAQ;
 @end
 
 @implementation FeedbackController
@@ -24,14 +26,14 @@
 }
 
 - (void) setup {
-	NSDictionary *config = [[NSDictionary alloc] initWithContentsOfFile: [[NSBundle mainBundle] pathForResource:@"Feedback" ofType:@"plist"]];
-	if (!config) {
+	self.feedbackConfig = [[NSDictionary alloc] initWithContentsOfFile: [[NSBundle mainBundle] pathForResource:@"Feedback" ofType:@"plist"]];
+	if (!self.feedbackConfig) {
 #ifdef DEBUG
-		NSAssert(config, @"Feedback.plist missing");
+		NSAssert(self.feedbackConfig, @"Feedback.plist missing");
 #endif
 		return;
 	}
-	NSMutableDictionary *feedbackConfig = [config mutableCopy];
+	NSMutableDictionary *feedbackConfig = [self.feedbackConfig mutableCopy];
 	[feedbackConfig removeObjectForKey:@"modules"];
 	
 	if ([feedbackConfig[@"darkMode"] boolValue])
@@ -39,7 +41,7 @@
 
 	UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Feedback" bundle:nil];
 	NSMutableArray *viewControllers = [@[] mutableCopy];
-	for (NSDictionary *moduleConfig in config[@"modules"]) {
+	for (NSDictionary *moduleConfig in self.feedbackConfig[@"modules"]) {
 		NSString *controllerName = [NSString stringWithFormat:@"%@FeedbackViewController", [moduleConfig[@"name"] capitalizedString]];
 		AbstractFeedbackViewController *viewController = [storyboard instantiateViewControllerWithIdentifier:controllerName];
 		if (viewController) {
@@ -54,10 +56,47 @@
 			viewController.feedbackConfig = feedbackConfig;
 			viewController.moduleConfig = moduleConfig;
 			[viewControllers addObject:navigationController];
+
+			// test/update FAQ list for contact module
+			if ([moduleConfig[@"name"] isEqualToString:@"contact"]) {
+				dispatch_async (dispatch_get_global_queue (DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+					[self updateFAQ:moduleConfig[@"faq"]];
+				});
+			}
 		}
 	}
 	self.viewControllers = viewControllers;
 	self.selectedIndex = 0;
+}
+
+- (void) updateFAQ:(NSDictionary*)config {
+	if (config[@"file"] || !config[@"URL"])
+		return;
+
+	NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+	NSDate *updated = [defaults objectForKey:FeedbackFAQUpdate];
+	NSNumber *limit = config[@"updateLimit"];
+	NSDate *updatedLimit = [NSDate dateWithTimeIntervalSinceNow:-(60*60*24) * limit.integerValue];
+	
+	NSString *fileName = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES).firstObject stringByAppendingPathComponent:FeedbackFAQPList];
+	NSArray *faqList = [NSArray arrayWithContentsOfFile:fileName];
+	
+	if (!self.isUpdatingFAQ &&
+			(!faqList.count || !updated || NSOrderedAscending == [updated compare:updatedLimit])) {
+		self.isUpdatingFAQ = YES;
+		
+		NSURLRequest *urlRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:config[@"URL"]]];
+		NSURLResponse *response;
+		//				[UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+		NSData *urlData = [NSURLConnection sendSynchronousRequest:urlRequest returningResponse:&response error:nil];
+		//				[UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+		if (urlData) {
+			[[NSFileManager defaultManager] removeItemAtPath:fileName error:nil];
+			[urlData writeToFile:fileName atomically:YES];
+		}
+		self.isUpdatingFAQ = NO;
+		[defaults setObject:[NSDate date] forKey:FeedbackFAQUpdate];
+	}
 }
 
 @end

@@ -9,7 +9,7 @@
 	<key>WebURL</key>
 	<string>http://getniceapp.com</string>
 	<key>darkMode</key>
-	<true/>
+	<false/>
 	<key>modules</key>
 	<array>
 		<dict>
@@ -21,6 +21,15 @@
 			<string>info@omich.de</string>
 			<key>services</key>
 			<string>store,email,twitter,facebook</string>
+			<key>faq</key>
+			<dict>
+				<key>file</key>
+				<string>FeedbackFAQ.plist</string>
+				<key>URL</key>
+				<string>http://getniceapp.com/faq.plist</string>
+				<key>updateLimit</key>
+				<integer>7</integer>
+			</dict>
 		</dict>
 		<dict>
 			<key>name</key>
@@ -34,7 +43,7 @@
 			<key>name</key>
 			<string>about</string>
 			<key>file</key>
-			<string>feedbackAbout.html</string>
+			<string>FeedbackAbout.html</string>
 		</dict>
 		<dict>
 			<key>name</key>

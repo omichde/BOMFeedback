@@ -27,7 +27,7 @@
 		DE7845E01B120F86003B21B7 /* ModulFeedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE7845D01B120F86003B21B7 /* ModulFeedbackViewController.m */; };
 		DE7845E11B120F86003B21B7 /* Feedback.plist in Resources */ = {isa = PBXBuildFile; fileRef = DE7845D11B120F86003B21B7 /* Feedback.plist */; };
 		DE7845E41B12117A003B21B7 /* FeedbackFAQ.plist in Resources */ = {isa = PBXBuildFile; fileRef = DE7845E61B12117A003B21B7 /* FeedbackFAQ.plist */; };
-		DE7845E81B1211A3003B21B7 /* feedbackAbout.html in Resources */ = {isa = PBXBuildFile; fileRef = DE7845EA1B1211A3003B21B7 /* feedbackAbout.html */; };
+		DE7845E81B1211A3003B21B7 /* FeedbackAbout.html in Resources */ = {isa = PBXBuildFile; fileRef = DE7845EA1B1211A3003B21B7 /* FeedbackAbout.html */; };
 		DE7845EB1B1211AD003B21B7 /* FeedbackLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DE7845ED1B1211AD003B21B7 /* FeedbackLocalizable.strings */; };
 		DE7845F71B121294003B21B7 /* Feedback.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE7845F61B121284003B21B7 /* Feedback.storyboard */; };
 		DEA611891B15C9BD00F8B7AE /* FeedbackStar.sks in Resources */ = {isa = PBXBuildFile; fileRef = DE4FAB1C1B146795002D6391 /* FeedbackStar.sks */; };
@@ -85,12 +85,12 @@
 		DE7845D01B120F86003B21B7 /* ModulFeedbackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModulFeedbackViewController.m; sourceTree = "<group>"; };
 		DE7845D11B120F86003B21B7 /* Feedback.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Feedback.plist; sourceTree = "<group>"; };
 		DE7845E51B12117A003B21B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Base; path = Base.lproj/FeedbackFAQ.plist; sourceTree = "<group>"; };
-		DE7845E91B1211A3003B21B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = Base; path = Base.lproj/feedbackAbout.html; sourceTree = "<group>"; };
+		DE7845E91B1211A3003B21B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = Base; path = Base.lproj/FeedbackAbout.html; sourceTree = "<group>"; };
 		DE7845EC1B1211AD003B21B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/FeedbackLocalizable.strings; sourceTree = "<group>"; };
-		DE7845EE1B1211C0003B21B7 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = fr; path = fr.lproj/feedbackAbout.html; sourceTree = "<group>"; };
+		DE7845EE1B1211C0003B21B7 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = fr; path = fr.lproj/FeedbackAbout.html; sourceTree = "<group>"; };
 		DE7845EF1B1211C0003B21B7 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = fr; path = fr.lproj/FeedbackFAQ.plist; sourceTree = "<group>"; };
 		DE7845F01B1211C0003B21B7 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/FeedbackLocalizable.strings; sourceTree = "<group>"; };
-		DE7845F11B1211C7003B21B7 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = de; path = de.lproj/feedbackAbout.html; sourceTree = "<group>"; };
+		DE7845F11B1211C7003B21B7 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = de; path = de.lproj/FeedbackAbout.html; sourceTree = "<group>"; };
 		DE7845F21B1211C7003B21B7 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = de; path = de.lproj/FeedbackFAQ.plist; sourceTree = "<group>"; };
 		DE7845F31B1211C7003B21B7 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/FeedbackLocalizable.strings; sourceTree = "<group>"; };
 		DE7845F51B121284003B21B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Feedback.storyboard; sourceTree = "<group>"; };
@@ -186,7 +186,7 @@
 				DEA611921B16024300F8B7AE /* Package1.rtf */,
 				DEA611941B1602A000F8B7AE /* Package2.html */,
 				DEA611961B1602D100F8B7AE /* Package3.pdf */,
-				DE7845EA1B1211A3003B21B7 /* feedbackAbout.html */,
+				DE7845EA1B1211A3003B21B7 /* FeedbackAbout.html */,
 				DE7845E61B12117A003B21B7 /* FeedbackFAQ.plist */,
 				DE7845ED1B1211AD003B21B7 /* FeedbackLocalizable.strings */,
 				DE7845BA1B120F86003B21B7 /* Feedback */,
@@ -309,7 +309,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE7845E41B12117A003B21B7 /* FeedbackFAQ.plist in Resources */,
-				DE7845E81B1211A3003B21B7 /* feedbackAbout.html in Resources */,
+				DE7845E81B1211A3003B21B7 /* FeedbackAbout.html in Resources */,
 				DEA611931B16024300F8B7AE /* Package1.rtf in Resources */,
 				DE7845761B120E8F003B21B7 /* Main.storyboard in Resources */,
 				DE7845DA1B120F86003B21B7 /* Feedback-Regular.otf in Resources */,
@@ -400,14 +400,14 @@
 			name = FeedbackFAQ.plist;
 			sourceTree = "<group>";
 		};
-		DE7845EA1B1211A3003B21B7 /* feedbackAbout.html */ = {
+		DE7845EA1B1211A3003B21B7 /* FeedbackAbout.html */ = {
 			isa = PBXVariantGroup;
 			children = (
 				DE7845E91B1211A3003B21B7 /* Base */,
 				DE7845EE1B1211C0003B21B7 /* fr */,
 				DE7845F11B1211C7003B21B7 /* de */,
 			);
-			name = feedbackAbout.html;
+			name = FeedbackAbout.html;
 			sourceTree = "<group>";
 		};
 		DE7845ED1B1211AD003B21B7 /* FeedbackLocalizable.strings */ = {
