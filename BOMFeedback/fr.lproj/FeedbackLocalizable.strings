@@ -19,4 +19,4 @@
 "Facebook-Text" = "#NiceAPP is funny: http://itunes.apple.com/de/app/id12345678?mt=8";
 
 "Report-Subject" = "Report - NiceAPP";
-"Report-Template" = "Report:\n\n(your comment here)\n\nLink: <%@>\nVersion: %@\nLocale: %@\nDevice: %@\niOS: %@";
+"Report-Template" = "Report:\n\n(your comment here)\n\nLink: <ITMSURL>\nVersion: <APPVERSION>\nLocale: <LOCALE>\nDevice: <MODEL>\niOS: <SYSTEMVERSION>";

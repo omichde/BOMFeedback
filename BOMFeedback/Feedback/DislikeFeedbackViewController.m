@@ -37,7 +37,19 @@
 	emailPicker.mailComposeDelegate = self;
 	[emailPicker setToRecipients:@[self.moduleConfig[@"email"]]];
 	emailPicker.subject = FeedbackLocalizedString(@"Report-Subject");
-	[emailPicker setMessageBody:[NSString stringWithFormat:FeedbackLocalizedString(@"Report-Template"), self.feedbackConfig[@"ITMSURL"], [[NSBundle mainBundle] infoDictionary][@"CFBundleShortVersionString"], [[NSLocale currentLocale] localeIdentifier], [[UIDevice currentDevice] localizedModel], [[UIDevice currentDevice] systemVersion]] isHTML:NO];
+	
+	NSString __block *text = FeedbackLocalizedString(@"Report-Template");
+	NSMutableDictionary *dict = [self.feedbackConfig mutableCopy];
+	dict[@"locale"] = [NSLocale currentLocale].localeIdentifier;
+	dict[@"appversion"] = [[NSBundle mainBundle] infoDictionary][@"CFBundleShortVersionString"];
+	dict[@"model"] = [UIDevice currentDevice].localizedModel;
+	dict[@"systemversion"] = [UIDevice currentDevice].systemVersion;
+
+	[dict enumerateKeysAndObjectsUsingBlock:^(NSString *key, NSString *value, BOOL *stop) {
+		text = [text stringByReplacingOccurrencesOfString:[NSString stringWithFormat:@"<%@>", [key uppercaseString]] withString:value];
+	}];
+
+	[emailPicker setMessageBody:text isHTML:NO];
 	[self presentViewController:emailPicker animated:YES completion:nil];
 }
 

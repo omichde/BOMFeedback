@@ -33,7 +33,9 @@
 	if ([self.feedbackConfig[@"darkMode"] boolValue])
 		self.busyView.activityIndicatorViewStyle = UIActivityIndicatorViewStyleWhite;
 
-	[self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:self.moduleConfig[@"URL"]]]];
+	NSString *urlString = self.moduleConfig[@"URL"];
+	urlString = [urlString stringByAppendingFormat:@"?locale=%@", [NSLocale currentLocale].localeIdentifier];
+	[self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:urlString]]];
 }
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView {

@@ -28,7 +28,11 @@
 - (void)viewDidLoad {
 	[super viewDidLoad];
 
-	[self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"about" ofType:@"html"]]]];
+	NSString *fileName = self.moduleConfig[@"file"];
+	NSString *extension = fileName.pathExtension;
+	fileName = [fileName substringToIndex:fileName.length - (extension.length+1)];
+
+	[self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:fileName	ofType:extension]]]];
 }
 
 @end
