@@ -2,7 +2,7 @@
 
 A general iOS feedback modul, which helps to show most APP informations, get in contact with the user, promote positiv APP ratings and other stuff - think of it as a more elaborated but concise AboutMe dialog.
 
-The idea behind this package is to free you as a developer from those tedious administrative areas within your APP (about, copyright, user contact) and at the same time motivate users to positive reviews: it starts with a simple question, wether the user like that APP (and hence could give a positiv review or like to share it) by providing a FAQ in case of problems or engage sharing in case they like it.
+The idea behind this package is to free you as a developer from those tedious administrative areas within your APP (about, copyright, user contact) and at the same time motivate users to positive reviews: it starts with a simple question, wether the user like that APP (and hence could give a positiv review or like to share it) or in case of problems provides a FAQ/email contact.
 
 # Features
 
@@ -10,11 +10,12 @@ The idea behind this package is to free you as a developer from those tedious ad
 - selection of "sharing services" (APP Store rating deep link, email, twitter, facebook)
 - every text output can be localized
 - custom icon font for (tab bar) symbols, zero images used
-- DarkMode for a dark-themed mode
-- UIAppearance savvy
+- DarkMode for a dark-themed mode, UIAppearance savvy
 - runs modally or as a form sheet
 - self-contained, no extra dependancies
 - one storyboard, all AutoLayout, full rotation support
+- local or server-based FAQ with auto-updating
+- embedding for custom subviewcontroller (i.e. for IAP restauration)
 
 # Installation
 
@@ -76,7 +77,6 @@ Tested and developed under iOS8, it should work under iOS7 as well. Dropping the
 Open features I'd like to integrate
 - detect and embed HockeySDK to provide true face2face feedback
 - adopt push for UINavigationController
-- downloadable FAQ list
 
 # Contact
 
