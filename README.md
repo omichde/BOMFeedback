@@ -24,8 +24,11 @@ Copy the `BOMFeedback` folder from the `niceapp` sample into your project (no po
 # Documentation
 
 `APPId` - the number of your APP in the APP store (123456789)
+
 `ITMSURL` - the Link to your APP in the APP store (http://itunes.apple.com/de/app/id12345678?mt=8)
+
 `WebURL` - the Link to your website for this APP (http://getniceapp.com)
+
 `darkMode` - switch to use a dark mode, default NO, optional
 
 ## Contact modul
@@ -33,16 +36,23 @@ Copy the `BOMFeedback` folder from the `niceapp` sample into your project (no po
 This is the core and initial modul. It simply starts with the question if the user likes the APP or not. In case he likes it, he'll be invited to submit a review in the APP store and/or share an APP link to others. In case there is a problem, a FAQ is displayed and an email button to get in contact with you.
 
 `submodule` - classname of a custom subviewcontroller, optional. If you want to display further information about your APP in the contact modul or an APP store purchase restoring feature, this might be the right place.
+
 `email` - email address to be used in the contact sheet (info@getniceapp.com)
+
 `services` - comma separated list of services: store, email, twitter, facebook
+
 `faq` - in case the user has a problem, a FAQ will be displayed which either comes locally  preinstalled or is loaded from your server
+
 `faq/file` - local filename containing your FAQ, optional (FeedbackFAQ.plist)
+
 `faq/URL`- remote URL to load the FAQ from, optional (http://getniceapp.com/faq.plist)
+
 `faq/updateLimit` - update interval in days to fetch a FAQ update (7)
 
 You have to either provide a local file for your FAQs or an URL + updateLimit where to load the FAQs from. For the latter, some GET parameters are sent as well:
 
 `locale` - the locale of the APP
+
 `src` - the CFBundleName of the APP
 
 ## APPs modul
@@ -54,6 +64,7 @@ This modul loads and displays a HTML page from your server. Your page should con
 Following GET parameters are sent to the server:
 
 `locale` - the locale of the APP
+
 `src` - the CFBundleName of the APP
 
 ## About modul
