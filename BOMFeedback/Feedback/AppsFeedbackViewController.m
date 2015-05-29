@@ -34,7 +34,7 @@
 		self.busyView.activityIndicatorViewStyle = UIActivityIndicatorViewStyleWhite;
 
 	NSString *urlString = self.moduleConfig[@"URL"];
-	urlString = [urlString stringByAppendingFormat:@"?locale=%@", [NSLocale currentLocale].localeIdentifier];
+	urlString = [urlString stringByAppendingFormat:@"?locale=%@&src=%@", [NSLocale currentLocale].localeIdentifier, [[NSBundle mainBundle].infoDictionary[@"CFBundleName"] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
 	[self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:urlString]]];
 }
 

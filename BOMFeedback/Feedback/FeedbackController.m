@@ -84,8 +84,11 @@
 	if (!self.isUpdatingFAQ &&
 			(!faqList.count || !updated || NSOrderedAscending == [updated compare:updatedLimit])) {
 		self.isUpdatingFAQ = YES;
-		
-		NSURLRequest *urlRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:config[@"URL"]]];
+	
+		NSString *urlString = config[@"URL"];
+		urlString = [urlString stringByAppendingFormat:@"?locale=%@&src=%@", [NSLocale currentLocale].localeIdentifier, [[NSBundle mainBundle].infoDictionary[@"CFBundleName"] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+
+		NSURLRequest *urlRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:urlString]];
 		NSURLResponse *response;
 		//				[UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
 		NSData *urlData = [NSURLConnection sendSynchronousRequest:urlRequest returningResponse:&response error:nil];
@@ -96,6 +99,28 @@
 		}
 		self.isUpdatingFAQ = NO;
 		[defaults setObject:[NSDate date] forKey:FeedbackFAQUpdate];
+	}
+}
+
+#pragma mark FeedbackControllerDelegate
+
+- (void) dismiss {
+	[self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void) presentModule:(NSString *)name {
+	NSUInteger pos = [self.viewControllers indexOfObjectPassingTest:^BOOL(UINavigationController *navigationController, NSUInteger idx, BOOL *stop) {
+		AbstractFeedbackViewController *viewController = navigationController.viewControllers.firstObject;
+		if ([viewController.moduleConfig[@"name"] isEqualToString:name]) {
+			*stop = YES;
+			return YES;
+		}
+		return NO;
+	}];
+	if (NSNotFound != pos) {
+		UINavigationController *navigationController = self.viewControllers[pos];
+		[navigationController popToRootViewControllerAnimated:NO];
+		self.selectedViewController = navigationController;
 	}
 }
 

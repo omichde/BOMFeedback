@@ -9,14 +9,14 @@
 	<key>WebURL</key>
 	<string>http://getniceapp.com</string>
 	<key>darkMode</key>
-	<false/>
+	<true/>
 	<key>modules</key>
 	<array>
 		<dict>
 			<key>name</key>
 			<string>contact</string>
 			<key>submodule</key>
-			<string>StoreViewController</string>
+			<string>SubViewController</string>
 			<key>email</key>
 			<string>info@omich.de</string>
 			<key>services</key>

@@ -14,6 +14,7 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *likeButton;
 @property (weak, nonatomic) IBOutlet UIButton *dislikeButton;
+@property (weak, nonatomic) IBOutlet UIView *subviewContainer;
 
 @end
 
@@ -23,7 +24,7 @@
 	self = [super initWithCoder:aDecoder];
 	
 	self.tabBarItem = [[UITabBarItem alloc] initWithTitle:FeedbackLocalizedString(@"Contact") image:[[UIImage feedbackIconTabBarImage:IFBubble] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] selectedImage:[UIImage feedbackIconTabBarImage:IFBubbleFilled]];
-	
+
 	return self;
 }
 
@@ -32,6 +33,15 @@
 
 	[self.likeButton feedbackPrependTextWithIcon:IFHeartFilled color:[UIColor redColor]];
 	[self.dislikeButton feedbackPrependTextWithIcon:IFBubbleFilled color:[UIColor colorWithRed:0.000 green:0.000 blue:0.5 alpha:1.000]];
+
+	if (self.moduleConfig[@"submodule"]) {
+		UIViewController *subViewController = [[NSClassFromString(self.moduleConfig[@"submodule"]) alloc] init];
+		subViewController.view.frame = self.subviewContainer.bounds;
+		[self.subviewContainer addSubview:subViewController.view];
+		[self addChildViewController:subViewController];
+		[subViewController didMoveToParentViewController:self];
+	}
+
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {

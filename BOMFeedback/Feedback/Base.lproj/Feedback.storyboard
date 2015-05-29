@@ -23,7 +23,7 @@
                                     <constraint firstAttribute="height" constant="50" id="pPW-UB-sjp"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="I Like this APP"/>
+                                <state key="normal" title="I like this APP"/>
                                 <connections>
                                     <segue destination="lmy-a5-oJA" kind="show" id="FAu-4Y-7ko"/>
                                 </connections>
@@ -40,21 +40,30 @@
                                     <segue destination="gsP-ho-vdp" kind="show" id="pOW-4T-i0f"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HU3-4k-y5r" userLabel="Container View">
+                                <rect key="frame" x="0.0" y="160" width="600" height="440"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.94819653157106376" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="L8i-PX-30h" firstAttribute="leading" secondItem="mvK-U4-PEj" secondAttribute="leading" id="2yl-mB-c0T"/>
+                            <constraint firstItem="HU3-4k-y5r" firstAttribute="leading" secondItem="dAU-YR-F2h" secondAttribute="leading" id="G0J-6G-Qdc"/>
                             <constraint firstAttribute="trailing" secondItem="mvK-U4-PEj" secondAttribute="trailing" constant="-1" id="Zq8-nQ-mnf"/>
                             <constraint firstItem="L8i-PX-30h" firstAttribute="top" secondItem="mvK-U4-PEj" secondAttribute="bottom" constant="20" id="dIE-yk-3IL"/>
+                            <constraint firstItem="HU3-4k-y5r" firstAttribute="top" secondItem="L8i-PX-30h" secondAttribute="bottom" id="dhf-xv-AFf"/>
                             <constraint firstItem="mvK-U4-PEj" firstAttribute="top" secondItem="zKg-qS-pHP" secondAttribute="bottom" constant="20" id="ejQ-JH-pFM"/>
                             <constraint firstItem="L8i-PX-30h" firstAttribute="trailing" secondItem="mvK-U4-PEj" secondAttribute="trailing" id="hsV-50-oMH"/>
+                            <constraint firstAttribute="bottom" secondItem="HU3-4k-y5r" secondAttribute="bottom" id="plS-49-MQn"/>
                             <constraint firstItem="mvK-U4-PEj" firstAttribute="leading" secondItem="dAU-YR-F2h" secondAttribute="leading" constant="-1" id="vI3-zf-Wyg"/>
+                            <constraint firstAttribute="trailing" secondItem="HU3-4k-y5r" secondAttribute="trailing" id="xkH-t5-G3t"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <connections>
                         <outlet property="dislikeButton" destination="L8i-PX-30h" id="ri1-Fl-Rbc"/>
                         <outlet property="likeButton" destination="mvK-U4-PEj" id="lCT-nX-uZX"/>
+                        <outlet property="subviewContainer" destination="HU3-4k-y5r" id="pB5-eF-0RA"/>
                         <outletCollection property="framedViews" destination="mvK-U4-PEj" id="IVo-uH-Ypd"/>
                         <outletCollection property="framedViews" destination="L8i-PX-30h" id="Mjx-bn-5AV"/>
                     </connections>
@@ -441,6 +450,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8GY-Hn-pBV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="254" y="2025"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="x5K-V1-L64">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="9fN-ye-b5J" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="agd-Ms-mCg"/>
+                        <viewControllerLayoutGuide type="bottom" id="7N0-kD-Jv1"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Z81-uk-JWk">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="har-Nh-KNo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
         </scene>
     </scenes>
 </document>

@@ -16,6 +16,17 @@
 
 #define FeedbackFAQUpdate (@"feedbackFAQUpdate")
 
-@interface FeedbackController : UITabBarController
+@interface FeedbackController : UITabBarController <UITabBarDelegate, UITabBarControllerDelegate>
+
+/**
+ * Dismisses the Feedback Controller altogether
+ */
+- (void) dismiss;
+
+/**
+ * Presents a specific module and pops back to its start view controller.
+ * @param name The same name given in the configuration file.
+ */
+- (void) presentModule:(NSString*)name;
 
 @end

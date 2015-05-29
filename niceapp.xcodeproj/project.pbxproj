@@ -35,6 +35,8 @@
 		DEA611931B16024300F8B7AE /* Package1.rtf in Resources */ = {isa = PBXBuildFile; fileRef = DEA611921B16024300F8B7AE /* Package1.rtf */; };
 		DEA611951B1602A000F8B7AE /* Package2.html in Resources */ = {isa = PBXBuildFile; fileRef = DEA611941B1602A000F8B7AE /* Package2.html */; };
 		DEA611971B1602D100F8B7AE /* Package3.pdf in Resources */ = {isa = PBXBuildFile; fileRef = DEA611961B1602D100F8B7AE /* Package3.pdf */; };
+		DEA6119A1B18B5E200F8B7AE /* SubViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEA611991B18B5E200F8B7AE /* SubViewController.m */; };
+		DEA6119C1B18BDE300F8B7AE /* SubViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEA6119B1B18BDE300F8B7AE /* SubViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +101,9 @@
 		DEA611921B16024300F8B7AE /* Package1.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = Package1.rtf; sourceTree = "<group>"; };
 		DEA611941B1602A000F8B7AE /* Package2.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Package2.html; sourceTree = "<group>"; };
 		DEA611961B1602D100F8B7AE /* Package3.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Package3.pdf; sourceTree = "<group>"; };
+		DEA611981B18B5E200F8B7AE /* SubViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubViewController.h; sourceTree = "<group>"; };
+		DEA611991B18B5E200F8B7AE /* SubViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubViewController.m; sourceTree = "<group>"; };
+		DEA6119B1B18BDE300F8B7AE /* SubViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SubViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +149,9 @@
 				DE78456F1B120E8F003B21B7 /* AppDelegate.m */,
 				DE7845711B120E8F003B21B7 /* ViewController.h */,
 				DE7845721B120E8F003B21B7 /* ViewController.m */,
+				DEA611981B18B5E200F8B7AE /* SubViewController.h */,
+				DEA611991B18B5E200F8B7AE /* SubViewController.m */,
+				DEA6119B1B18BDE300F8B7AE /* SubViewController.xib */,
 				DE7845741B120E8F003B21B7 /* Main.storyboard */,
 				DE7845771B120E8F003B21B7 /* Images.xcassets */,
 				DE7845791B120E8F003B21B7 /* LaunchScreen.xib */,
@@ -319,6 +327,7 @@
 				DE78457B1B120E8F003B21B7 /* LaunchScreen.xib in Resources */,
 				DE7845781B120E8F003B21B7 /* Images.xcassets in Resources */,
 				DE7845E11B120F86003B21B7 /* Feedback.plist in Resources */,
+				DEA6119C1B18BDE300F8B7AE /* SubViewController.xib in Resources */,
 				DEA611891B15C9BD00F8B7AE /* FeedbackStar.sks in Resources */,
 				DE7845F71B121294003B21B7 /* Feedback.storyboard in Resources */,
 			);
@@ -338,6 +347,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEA6119A1B18B5E200F8B7AE /* SubViewController.m in Sources */,
 				DE7845731B120E8F003B21B7 /* ViewController.m in Sources */,
 				DE7845DE1B120F86003B21B7 /* LikeFeedbackViewController.m in Sources */,
 				DE7845701B120E8F003B21B7 /* AppDelegate.m in Sources */,
