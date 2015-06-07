@@ -50,7 +50,7 @@
 	SKEmitterNode *starNode = [SKEmitterNode nodeWithFileNamed:@"FeedbackStar"];
 	starNode.particleTexture = [SKTexture textureWithImage:[UIImage feedbackIconImage:IFStarFilled fontSize:50 fontColor:[UIColor whiteColor] forSize:CGSizeMake(50, 50)]];
 	starNode.position = CGPointMake(CGRectGetMidX(self.thanksView.bounds), CGRectGetMaxY(self.thanksView.bounds) * 0.3);
-	starNode.particlePositionRange = CGVectorMake(CGRectGetWidth(self.thanksView.bounds) * 0.8, 10);
+	starNode.particlePositionRange = CGVectorMake(CGRectGetWidth(self.thanksView.bounds) * 0.6, 10);
 	SKScene *scene = [SKScene sceneWithSize:self.thanksView.bounds.size];
 	scene.backgroundColor = [UIColor colorWithWhite:0.95 alpha:1.000];
 	if ([self.feedbackConfig[@"darkMode"] boolValue])

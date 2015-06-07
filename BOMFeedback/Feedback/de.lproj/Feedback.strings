@@ -1,0 +1,33 @@
+
+/* Class = "UILabel"; text = "As an independent developer, I am open for your suggestions or questions by email - thank you"; ObjectID = "7j6-MV-x7I"; */
+"7j6-MV-x7I.text" = "Als unabhängiger Entwickler freue ich mich über Vorschläge oder Fragen via Email - Vielen Dank";
+
+/* Class = "UIButton"; normalTitle = "oliver@werk01.de"; ObjectID = "CLd-ky-a8F"; */
+"CLd-ky-a8F.normalTitle" = "oliver@werk01.de";
+
+/* Class = "UIButton"; normalTitle = "Rate in APP store"; ObjectID = "Fv8-Cu-tqM"; */
+"Fv8-Cu-tqM.normalTitle" = "Bewerten im APP Store";
+
+/* Class = "UIButton"; normalTitle = "Post to Facebook"; ObjectID = "HaR-S9-sn9"; */
+"HaR-S9-sn9.normalTitle" = "Auf Facebook teilen";
+
+/* Class = "UIButton"; normalTitle = "There is a problem..."; ObjectID = "L8i-PX-30h"; */
+"L8i-PX-30h.normalTitle" = "Es gibt ein Problem...";
+
+/* Class = "UIButton"; normalTitle = "Recommend via email"; ObjectID = "YeE-zu-J0e"; */
+"YeE-zu-J0e.normalTitle" = "Per Email empfehlen";
+
+/* Class = "UILabel"; text = "Frequently asked questions:"; ObjectID = "lD9-Co-Rs5"; */
+"lD9-Co-Rs5.text" = "Fragen & Antworten:";
+
+/* Class = "UIButton"; normalTitle = "I like this APP"; ObjectID = "mvK-U4-PEj"; */
+"mvK-U4-PEj.normalTitle" = "Ich mag die APP";
+
+/* Class = "UIButton"; normalTitle = "Share on Twitter"; ObjectID = "sQ0-nQ-3qh"; */
+"sQ0-nQ-3qh.normalTitle" = "Auf Twitter teilen";
+
+/* Class = "UILabel"; text = "Thank you"; ObjectID = "vjg-EP-myA"; */
+"vjg-EP-myA.text" = "Vielen Dank";
+
+/* Class = "UILabel"; text = "Thank you dear developers for your libraries used in this APP:"; ObjectID = "ySq-qT-olx"; */
+"ySq-qT-olx.text" = "Hiermit danke ich den Entwicklern für folgende Libraries:";

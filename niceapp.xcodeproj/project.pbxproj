@@ -50,6 +50,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DE0E6F8D1B249E8D00B81970 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Feedback.strings; sourceTree = "<group>"; };
 		DE4FAB1C1B146795002D6391 /* FeedbackStar.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = FeedbackStar.sks; sourceTree = "<group>"; };
 		DE7845671B120E8F003B21B7 /* niceapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = niceapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE78456B1B120E8F003B21B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -434,6 +435,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				DE7845F51B121284003B21B7 /* Base */,
+				DE0E6F8D1B249E8D00B81970 /* de */,
 			);
 			name = Feedback.storyboard;
 			sourceTree = "<group>";

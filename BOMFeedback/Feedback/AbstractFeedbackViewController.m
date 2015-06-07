@@ -37,7 +37,7 @@
 - (void) viewWillAppear:(BOOL)animated {
 	[super viewWillAppear:animated];
 
-	self.title = (1 == self.navigationController.viewControllers.count ? self.tabBarItem.title : self.navigationItem.title);
+	self.navigationItem.title = (1 == self.navigationController.viewControllers.count ? self.tabBarItem.title : self.navigationItem.title);
 }
 
 - (void)close {
