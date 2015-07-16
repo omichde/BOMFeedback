@@ -36,10 +36,12 @@
 
 	if (self.moduleConfig[@"submodule"]) {
 		UIViewController *subViewController = [[NSClassFromString(self.moduleConfig[@"submodule"]) alloc] init];
-		subViewController.view.frame = self.subviewContainer.bounds;
-		[self.subviewContainer addSubview:subViewController.view];
-		[self addChildViewController:subViewController];
-		[subViewController didMoveToParentViewController:self];
+		if (subViewController) {
+			subViewController.view.frame = self.subviewContainer.bounds;
+			[self.subviewContainer addSubview:subViewController.view];
+			[self addChildViewController:subViewController];
+			[subViewController didMoveToParentViewController:self];
+		}
 	}
 
 }

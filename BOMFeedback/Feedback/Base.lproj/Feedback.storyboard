@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
@@ -25,7 +26,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="I like this APP"/>
                                 <connections>
-                                    <segue destination="lmy-a5-oJA" kind="show" id="FAu-4Y-7ko"/>
+                                    <segue destination="lmy-a5-oJA" kind="push" id="FAu-4Y-7ko"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L8i-PX-30h">
@@ -37,7 +38,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="There is a problem..."/>
                                 <connections>
-                                    <segue destination="gsP-ho-vdp" kind="show" id="pOW-4T-i0f"/>
+                                    <segue destination="gsP-ho-vdp" kind="push" id="pOW-4T-i0f"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HU3-4k-y5r" userLabel="Container View">
@@ -202,6 +203,7 @@
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
+                    <navigationItem key="navigationItem" id="aUS-Fn-FbB"/>
                     <connections>
                         <outlet property="thanksView" destination="M26-Kq-62o" id="Bki-mE-3BJ"/>
                         <outletCollection property="framedViews" destination="Fv8-Cu-tqM" id="AH8-xS-jiL"/>
@@ -444,6 +446,7 @@
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
+                    <navigationItem key="navigationItem" id="trY-Q0-g8Q"/>
                     <connections>
                         <outlet property="emailButton" destination="CLd-ky-a8F" id="m4w-is-8Zo"/>
                         <outletCollection property="framedViews" destination="CLd-ky-a8F" id="dEa-Hh-EA6"/>
@@ -452,24 +455,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8GY-Hn-pBV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="254" y="2025"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="x5K-V1-L64">
-            <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="9fN-ye-b5J" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="agd-Ms-mCg"/>
-                        <viewControllerLayoutGuide type="bottom" id="7N0-kD-Jv1"/>
-                    </layoutGuides>
-                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Z81-uk-JWk">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <toolbarItems/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="har-Nh-KNo" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
         </scene>
     </scenes>
 </document>
