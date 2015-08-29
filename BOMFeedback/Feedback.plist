@@ -10,12 +10,14 @@
 	<string>http://getniceapp.com</string>
 	<key>darkMode</key>
 	<true/>
+	<key>_navigationBarColor</key>
+	<string>0.976,0.533,0.173 or #ff00ab</string>
 	<key>modules</key>
 	<array>
 		<dict>
 			<key>name</key>
 			<string>contact</string>
-			<key>submodule</key>
+			<key>_submodule</key>
 			<string>SubViewController</string>
 			<key>email</key>
 			<string>info@omich.de</string>
@@ -25,9 +27,9 @@
 			<dict>
 				<key>file</key>
 				<string>FeedbackFAQ.plist</string>
-				<key>URL</key>
+				<key>_URL</key>
 				<string>http://getniceapp.com/faq.plist</string>
-				<key>updateLimit</key>
+				<key>_updateLimit</key>
 				<integer>7</integer>
 			</dict>
 		</dict>

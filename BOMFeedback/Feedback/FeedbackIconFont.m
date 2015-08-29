@@ -45,9 +45,9 @@ NSString *const IFTwitter = @"\uf014";
 NSString *const IFFacebook = @"\uf015";
 NSString *const IFShare = @"\uf016";
 
-CGFloat const IFBarButtonIconFontSize = 20.;
+CGFloat const IFBarButtonIconFontSize = 22.;
 
-#define kFeedbackDefaultFontSize (15.)
+CGFloat const IFFeedbackDefaultFontSize = 15.;
 
 @implementation UIFont (FeedbackIconFont)
 
@@ -66,7 +66,7 @@ CGFloat const IFBarButtonIconFontSize = 20.;
 }
 
 + (UIFont*) feedbackIconFont {
-	return [self feedbackIconFontWithSize:kFeedbackDefaultFontSize];
+	return [self feedbackIconFontWithSize:IFFeedbackDefaultFontSize];
 }
 
 @end
@@ -78,7 +78,7 @@ CGFloat const IFBarButtonIconFontSize = 20.;
 }
 
 + (UIButton*) feedbackIconButton:(NSString*)token target:(id)target action:(SEL)action {
-	return [self feedbackIconButton:token fontSize:kFeedbackDefaultFontSize target:target action:action];
+	return [self feedbackIconButton:token fontSize:IFFeedbackDefaultFontSize target:target action:action];
 }
 
 + (UIButton*) feedbackIconButton:(NSString*)token fontSize:(CGFloat)fontSize target:(id)target action:(SEL)action {
@@ -95,7 +95,7 @@ CGFloat const IFBarButtonIconFontSize = 20.;
 	NSRange range = NSMakeRange(0, 1);
 	NSDictionary *attributes = [self.currentAttributedTitle attributesAtIndex:0 effectiveRange:&range];
 	UIFont *font = attributes[NSFontAttributeName];
-	[self feedbackSetIcon:token fontSize:(font ? font.pointSize : kFeedbackDefaultFontSize)];
+	[self feedbackSetIcon:token fontSize:(font ? font.pointSize : IFFeedbackDefaultFontSize)];
 }
 
 - (void) feedbackSetIcon:(NSString*)token fontSize:(CGFloat)fontSize {
@@ -133,7 +133,7 @@ CGFloat const IFBarButtonIconFontSize = 20.;
 
 - (void) feedbackSetIcon:(NSString*)token forState:(UIControlState) state {
 	UIButton *nestedButton = (UIButton*)self.customView;
-	[nestedButton feedbackSetIcon:token fontSize:kFeedbackDefaultFontSize];
+	[nestedButton feedbackSetIcon:token fontSize:IFFeedbackDefaultFontSize];
 }
 
 + (UIBarButtonItem*) feedbackSpaceBarButtonItemWithWidth:(CGFloat)width {

@@ -10,6 +10,39 @@
 #import "AbstractFeedbackViewController.h"
 #import "UIView+DarkMode.h"
 
+@interface UIColor (StringColor)
++ (UIColor*)colorFromString:(NSString*)text;
+@end
+
+@implementation UIColor (StringColor)
++ (UIColor*)colorFromString:(NSString*)text {
+	if ([text hasPrefix:@"#"] && 7 == text.length) {
+		NSString *red = [text substringWithRange:NSMakeRange(1, 2)];
+		NSString *green = [text substringWithRange:NSMakeRange(3, 2)];
+		NSString *blue = [text substringWithRange:NSMakeRange(5, 2)];
+		
+		unsigned int r, g, b;
+		[[NSScanner scannerWithString:red] scanHexInt:&r];
+		[[NSScanner scannerWithString:green] scanHexInt:&g];
+		[[NSScanner scannerWithString:blue] scanHexInt:&b];
+		
+		return [UIColor colorWithRed:(r & 0xFF) / 255.0f green:(g & 0xFF) / 255.0f blue:(b & 0xFF) / 255.0f alpha: 1.0f];
+	}
+	NSArray *colorList = [text componentsSeparatedByString:@","];
+	if (3 == colorList.count) {
+		float r, g, b;
+		[[NSScanner scannerWithString:colorList[0]] scanFloat:&r];
+		[[NSScanner scannerWithString:colorList[1]] scanFloat:&g];
+		[[NSScanner scannerWithString:colorList[2]] scanFloat:&b];
+		
+		return [UIColor colorWithRed:r green:g blue:b alpha: 1.0f];
+	}
+	return nil;
+}
+@end
+
+#pragma mark -
+
 @interface FeedbackController ()
 
 @property (nonatomic) NSDictionary *feedbackConfig;
@@ -46,6 +79,10 @@
 		AbstractFeedbackViewController *viewController = [storyboard instantiateViewControllerWithIdentifier:controllerName];
 		if (viewController) {
 			UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
+			if (feedbackConfig[@"navigationBarColor"]) {
+				navigationController.navigationBar.barTintColor = [UIColor colorFromString:feedbackConfig[@"navigationBarColor"]];
+				navigationController.navigationBar.translucent = NO;
+			}
 			if ([feedbackConfig[@"darkMode"] boolValue]) {
 				navigationController.navigationBar.barStyle = UIBarStyleBlack;
 				navigationController.view.backgroundColor = [UIColor blackColor];

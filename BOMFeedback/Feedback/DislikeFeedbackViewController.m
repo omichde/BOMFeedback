@@ -15,6 +15,7 @@
 @interface DislikeFeedbackViewController () <MFMailComposeViewControllerDelegate, UITableViewDelegate, UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UIButton *emailButton;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (assign, nonatomic) NSInteger currentRow;
 @property (strong, nonatomic) NSArray *faqList;
 
@@ -24,6 +25,9 @@
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
+
+	self.tableView.tableHeaderView = [[UIView alloc] initWithFrame:CGRectZero];
+	self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
 
 	NSString *fileName = self.moduleConfig[@"faq"][@"file"];
 	if (fileName) {
