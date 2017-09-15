@@ -7,6 +7,7 @@
 //
 
 #import "LikeFeedbackViewController.h"
+#import <StoreKit/StoreKit.h>
 #import <MessageUI/MessageUI.h>
 #import <MessageUI/MFMailComposeViewController.h>
 #import <Social/Social.h>
@@ -67,12 +68,18 @@
 
 - (IBAction) appRank {
 	NSURL *url;
-	float iOSVersion = [UIDevice currentDevice].systemVersion.floatValue;
-	if (iOSVersion >= 7. && iOSVersion < 7.1)
-		url = [NSURL URLWithString:[NSString stringWithFormat:@"itms-apps://itunes.apple.com/app/id%@", self.feedbackConfig[@"APPId"]]];
-	else
-		url = [NSURL URLWithString:[NSString stringWithFormat:@"itms-apps://itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?type=Purple+Software&id=%@", self.feedbackConfig[@"APPId"]]];
-	[[UIApplication sharedApplication] openURL: url];
+
+	if ([SKStoreReviewController respondsToSelector:@selector(requestReview)]) {
+		[SKStoreReviewController requestReview];
+	}
+	else {
+		float iOSVersion = [UIDevice currentDevice].systemVersion.floatValue;
+		if (iOSVersion >= 7. && iOSVersion < 7.1)
+			url = [NSURL URLWithString:[NSString stringWithFormat:@"itms-apps://itunes.apple.com/app/id%@", self.feedbackConfig[@"APPId"]]];
+		else
+			url = [NSURL URLWithString:[NSString stringWithFormat:@"itms-apps://itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?type=Purple+Software&id=%@", self.feedbackConfig[@"APPId"]]];
+		[[UIApplication sharedApplication] openURL: url];
+	}
 }
 
 - (IBAction) email {
