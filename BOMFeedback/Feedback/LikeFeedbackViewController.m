@@ -54,9 +54,7 @@
 		starNode.position = CGPointMake(CGRectGetMidX(self.thanksView.bounds), CGRectGetMaxY(self.thanksView.bounds) * 0.3);
 		starNode.particlePositionRange = CGVectorMake(CGRectGetWidth(self.thanksView.bounds) * 0.6, 10);
 		SKScene *scene = [SKScene sceneWithSize:self.thanksView.bounds.size];
-		scene.backgroundColor = [UIColor colorWithWhite:0.95 alpha:1.000];
-		if ([self.feedbackConfig[@"darkMode"] boolValue])
-			scene.backgroundColor = [scene.backgroundColor darkModeBackColor];
+		scene.backgroundColor = self.view.backgroundColor;
 		
 		scene.scaleMode = SKSceneScaleModeAspectFit;
 		[scene addChild: starNode];
@@ -78,7 +76,7 @@
 			url = [NSURL URLWithString:[NSString stringWithFormat:@"itms-apps://itunes.apple.com/app/id%@", self.feedbackConfig[@"APPId"]]];
 		else
 			url = [NSURL URLWithString:[NSString stringWithFormat:@"itms-apps://itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?type=Purple+Software&id=%@", self.feedbackConfig[@"APPId"]]];
-		[[UIApplication sharedApplication] openURL: url];
+		[[UIApplication sharedApplication] openURL:url options:@{} completionHandler:nil];
 	}
 }
 
@@ -106,20 +104,20 @@
 		[self presentViewController:viewController animated:YES completion:nil];
 	}
 	else {
-		NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"twitterrific:///post?message=%@", [message stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]]];
+		NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"twitterrific:///post?message=%@", [message stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]]]];
 		if ([[UIApplication sharedApplication] canOpenURL:url])
-			[[UIApplication sharedApplication] openURL:url];
+			[[UIApplication sharedApplication] openURL:url options:@{} completionHandler:nil];
 		else {
-			url = [NSURL URLWithString:[NSString stringWithFormat:@"tweetbot:///post?text=%@", [message stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]]];
+			url = [NSURL URLWithString:[NSString stringWithFormat:@"tweetbot:///post?text=%@", [message stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]]]];
 			if ([[UIApplication sharedApplication] canOpenURL:url])
-				[[UIApplication sharedApplication] openURL:url];
+				[[UIApplication sharedApplication] openURL:url options:@{} completionHandler:nil];
 			else {
-				url = [NSURL URLWithString:[NSString stringWithFormat:@"twitter:///post?text=%@", [message stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]]];
+				url = [NSURL URLWithString:[NSString stringWithFormat:@"twitter:///post?text=%@", [message stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]]]];
 				if ([[UIApplication sharedApplication] canOpenURL:url])
-					[[UIApplication sharedApplication] openURL:url];
+					[[UIApplication sharedApplication] openURL:url options:@{} completionHandler:nil];
 				else {
-					url = [NSURL URLWithString:[NSString stringWithFormat:@"http://twitter.com/home?status=%@", [message stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]]];
-					[[UIApplication sharedApplication] openURL:url];
+					url = [NSURL URLWithString:[NSString stringWithFormat:@"http://twitter.com/home?status=%@", [message stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]]]];
+					[[UIApplication sharedApplication] openURL:url options:@{} completionHandler:nil];
 				}
 			}
 		}
@@ -135,7 +133,7 @@
 		[self presentViewController:socialViewController animated:YES completion:nil];
 	}
 	else {
-		[[UIApplication sharedApplication] openURL: [NSURL URLWithString:[NSString stringWithFormat:@"https://m.facebook.com/sharer.php?u=%@", [message stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]]]];
+		[[UIApplication sharedApplication] openURL: [NSURL URLWithString:[NSString stringWithFormat:@"https://m.facebook.com/sharer.php?u=%@", [message stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]]]] options:@{} completionHandler:nil];
 	}
 }
 

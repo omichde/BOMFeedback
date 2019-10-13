@@ -7,10 +7,11 @@
 //
 
 #import "ModulFeedbackViewController.h"
+#import <WebKit/WebKit.h>
 
 @interface ModulFeedbackViewController ()
 
-@property (weak, nonatomic) IBOutlet UIWebView *webView;
+@property (weak, nonatomic) IBOutlet WKWebView *webView;
 
 @end
 
@@ -19,7 +20,7 @@
 - (void)viewDidLoad {
 	[super viewDidLoad];
 
-	[self.webView loadRequest:[NSURLRequest requestWithURL:self.url]];
+	[self.webView loadFileURL:self.url allowingReadAccessToURL: self.url];
 }
 
 @end

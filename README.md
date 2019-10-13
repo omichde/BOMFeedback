@@ -2,7 +2,7 @@
 
 A general iOS feedback modul, which helps to show most APP informations, get in contact with the user, promote positiv APP ratings and other stuff - think of it as a more elaborated but concise AboutMe dialog.
 
-The idea behind this package is to free you as a developer from those tedious administrative areas within your APP (about, copyright, user contact) and at the same time motivate users to positive reviews: it starts with a simple question, wether the user like that APP (and hence could give a positiv review or like to share it) or in case of problems provides a FAQ/email contact.
+The idea behind this package is to free you as a developer from those tedious administrative areas within your APP (about, copyright, user contact) and at the same time motivate users to positive reviews: it starts with a simple question, wether the user likes that APP (and hence could give a positiv review or like to share it) or in case of problems provides a FAQ/email contact.
 
 # Features
 
@@ -10,9 +10,9 @@ The idea behind this package is to free you as a developer from those tedious ad
 - selection of "sharing services" (APP Store rating deep link, email, twitter, facebook)
 - every text output can be localized
 - custom icon font for (tab bar) symbols, zero images used
-- DarkMode for a dark-themed mode, UIAppearance savvy
+- support for iOS 13 DarkMode, UIAppearance savvy
 - runs modally or as a form sheet
-- self-contained, no extra dependancies
+- self-contained, no extra dependencies
 - one storyboard, all AutoLayout, full rotation support
 - local or server-based FAQ with auto-updating
 - embedding for custom subviewcontroller (i.e. for IAP restauration)
@@ -28,8 +28,6 @@ Copy the `BOMFeedback` folder from the `niceapp` sample into your project (no po
 `ITMSURL` - the Link to your APP in the APP store (http://itunes.apple.com/de/app/id12345678?mt=8)
 
 `WebURL` - the Link to your website for this APP (http://getniceapp.com)
-
-`darkMode` - switch to use a dark mode, default NO, optional
 
 ## Contact modul
 
@@ -81,13 +79,7 @@ A small acknoledgement page to those who built frameworks, libraries, code or gr
 
 # Compatibility
 
-Tested and developed under iOS8, it should work under iOS7 as well. Dropping the SpriteKit gimmick it should be compatible down to maybe iOS5 - but I won't test that anymore.
-
-# Version
-
-Open features I'd like to integrate
-- detect and embed HockeySDK to provide true face2face feedback
-- adopt push for UINavigationController
+Tested and developed under iOS11.
 
 # Contact
 

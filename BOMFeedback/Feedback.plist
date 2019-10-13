@@ -8,16 +8,12 @@
 	<string>http://itunes.apple.com/de/app/id12345678?mt=8</string>
 	<key>WebURL</key>
 	<string>http://getniceapp.com</string>
-	<key>darkMode</key>
-	<true/>
-	<key>_navigationBarColor</key>
-	<string>0.976,0.533,0.173 or #ff00ab</string>
 	<key>modules</key>
 	<array>
 		<dict>
 			<key>name</key>
 			<string>contact</string>
-			<key>_submodule</key>
+			<key>submodule</key>
 			<string>SubViewController</string>
 			<key>email</key>
 			<string>info@omich.de</string>

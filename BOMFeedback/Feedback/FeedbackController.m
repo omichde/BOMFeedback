@@ -69,9 +69,6 @@
 	NSMutableDictionary *feedbackConfig = [self.feedbackConfig mutableCopy];
 	[feedbackConfig removeObjectForKey:@"modules"];
 	
-	if ([feedbackConfig[@"darkMode"] boolValue])
-		[self.tabBar setupDarkMode];
-
 	UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Feedback" bundle:nil];
 	NSMutableArray *viewControllers = [@[] mutableCopy];
 	for (NSDictionary *moduleConfig in self.feedbackConfig[@"modules"]) {
@@ -83,7 +80,7 @@
 				navigationController.navigationBar.barTintColor = [UIColor colorFromString:feedbackConfig[@"navigationBarColor"]];
 				navigationController.navigationBar.translucent = NO;
 			}
-			if ([feedbackConfig[@"darkMode"] boolValue]) {
+			if (self.view.darkModeEnabled) {
 				navigationController.navigationBar.barStyle = UIBarStyleBlack;
 				navigationController.view.backgroundColor = [UIColor blackColor];
 			}
@@ -96,9 +93,7 @@
 
 			// test/update FAQ list for contact module
 			if ([moduleConfig[@"name"] isEqualToString:@"contact"]) {
-				dispatch_async (dispatch_get_global_queue (DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-					[self updateFAQ:moduleConfig[@"faq"]];
-				});
+				[self updateFAQ:moduleConfig[@"faq"]];
 			}
 		}
 	}
@@ -123,19 +118,19 @@
 		self.isUpdatingFAQ = YES;
 	
 		NSString *urlString = config[@"URL"];
-		urlString = [urlString stringByAppendingFormat:@"?locale=%@&src=%@", [NSLocale currentLocale].localeIdentifier, [[NSBundle mainBundle].infoDictionary[@"CFBundleName"] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+		urlString = [urlString stringByAppendingFormat:@"?locale=%@&src=%@", [NSLocale currentLocale].localeIdentifier, [[NSBundle mainBundle].infoDictionary[@"CFBundleName"] stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]]];
 
-		NSURLRequest *urlRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:urlString]];
-		NSURLResponse *response;
-		//				[UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
-		NSData *urlData = [NSURLConnection sendSynchronousRequest:urlRequest returningResponse:&response error:nil];
-		//				[UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
-		if (urlData) {
-			[[NSFileManager defaultManager] removeItemAtPath:fileName error:nil];
-			[urlData writeToFile:fileName atomically:YES];
-		}
-		self.isUpdatingFAQ = NO;
-		[defaults setObject:[NSDate date] forKey:FeedbackFAQUpdate];
+//		[UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+		NSURLSessionDataTask *task = [NSURLSession.sharedSession dataTaskWithURL:[NSURL URLWithString:urlString] completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+//			[UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+			if (data) {
+				[[NSFileManager defaultManager] removeItemAtPath:fileName error:nil];
+				[data writeToFile:fileName atomically:YES];
+			}
+			self.isUpdatingFAQ = NO;
+			[defaults setObject:[NSDate date] forKey:FeedbackFAQUpdate];
+		}];
+		[task resume];
 	}
 }
 

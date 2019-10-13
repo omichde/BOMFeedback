@@ -45,6 +45,8 @@
 }
 
 - (IBAction) email {
+	if (![MFMailComposeViewController canSendMail])
+		return;
 	MFMailComposeViewController *emailPicker = [[MFMailComposeViewController alloc] init];
 	emailPicker.navigationBar.tintColor = self.view.tintColor;
 	emailPicker.mailComposeDelegate = self;
@@ -114,7 +116,7 @@
 		cell.textLabel.font = [UIFont systemFontOfSize:[UIFont systemFontSize]];
 		cell.selectionStyle = UITableViewCellSelectionStyleGray;
 		cell.selectedBackgroundView = [[UIView alloc] initWithFrame:cell.bounds];
-		cell.selectedBackgroundView.backgroundColor = [UIColor colorWithWhite:0.8 alpha:1];
+		cell.selectedBackgroundView.backgroundColor = cell.darkModeEnabled ? [UIColor colorWithWhite:0.2 alpha:1] : [UIColor colorWithWhite:0.8 alpha:1];
 	}
 
 	cell.userInteractionEnabled = YES;
@@ -133,11 +135,9 @@
 
 - (void) tableView:(UITableView*) tableView willDisplayCell:(UITableViewCell*) cell forRowAtIndexPath:(NSIndexPath*) indexPath {
 	if (self.currentRow >= 0 && indexPath.row == self.currentRow+1)
-		cell.backgroundColor = [UIColor whiteColor];
+		cell.backgroundColor = tableView.darkModeEnabled ? [UIColor blackColor] : [UIColor whiteColor];
 	else
-		cell.backgroundColor = [UIColor colorWithWhite:0.9 alpha:1.];
-	if ([self.feedbackConfig[@"darkMode"] boolValue])
-		[cell setupDarkMode];
+		cell.backgroundColor = tableView.darkModeEnabled ? [UIColor colorWithWhite:0.1 alpha:1] : [UIColor colorWithWhite:0.9 alpha:1];
 }
 
 - (void) tableView:(UITableView*) tableView didSelectRowAtIndexPath:(NSIndexPath*) indexPath {

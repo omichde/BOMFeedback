@@ -9,11 +9,12 @@
 #import "AppsFeedbackViewController.h"
 #import "FeedbackController.h"
 #import "FeedbackIconFont.h"
+#import "UIView+DarkMode.h"
+#import <WebKit/WebKit.h>
 
-@interface AppsFeedbackViewController () <UIWebViewDelegate>
+@interface AppsFeedbackViewController ()
 
-@property (weak, nonatomic) IBOutlet UIWebView *webView;
-@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *busyView;
+@property (weak, nonatomic) IBOutlet WKWebView *webView;
 
 @end
 
@@ -30,20 +31,9 @@
 - (void)viewDidLoad {
 	[super viewDidLoad];
 
-	if ([self.feedbackConfig[@"darkMode"] boolValue])
-		self.busyView.activityIndicatorViewStyle = UIActivityIndicatorViewStyleWhite;
-
 	NSString *urlString = self.moduleConfig[@"URL"];
-	urlString = [urlString stringByAppendingFormat:@"?locale=%@&src=%@", [NSLocale currentLocale].localeIdentifier, [[NSBundle mainBundle].infoDictionary[@"CFBundleName"] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+	urlString = [urlString stringByAppendingFormat:@"?locale=%@&src=%@", [NSLocale currentLocale].localeIdentifier, [[NSBundle mainBundle].infoDictionary[@"CFBundleName"] stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]]];
 	[self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:urlString]]];
-}
-
-- (void)webViewDidFinishLoad:(UIWebView *)webView {
-	[self.busyView stopAnimating];
-}
-
-- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
-	[self.busyView stopAnimating];
 }
 
 @end

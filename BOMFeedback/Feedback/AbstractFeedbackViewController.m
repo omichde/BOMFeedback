@@ -23,15 +23,13 @@
 		self.navigationItem.leftBarButtonItems = [UIBarButtonItem feedbackIconBarButtonItems:IFCross target:self action:@selector(close)];
 
 	for (UIView *view in self.framedViews) {
-		if ([self.feedbackConfig[@"darkMode"] boolValue])
+		if (view.darkModeEnabled)
 			view.layer.borderColor = [UIColor colorWithWhite:0.2 alpha:1].CGColor;
 		else
 			view.layer.borderColor = [UIColor colorWithWhite:0.9 alpha:1.000].CGColor;
 		view.layer.borderWidth = 1. / [UIScreen mainScreen].scale;
 		view.tintColor = self.tabBarController.view.tintColor;	// propagate tintColor
 	}
-	if ([self.feedbackConfig[@"darkMode"] boolValue])
-		[self.view setupDarkMode];
 }
 
 - (void) viewWillAppear:(BOOL)animated {

@@ -8,10 +8,11 @@
 
 #import "AboutFeedbackViewController.h"
 #import "FeedbackController.h"
+#import <WebKit/WebKit.h>
 
 @interface AboutFeedbackViewController ()
 
-@property (weak, nonatomic) IBOutlet UIWebView *webView;
+@property (weak, nonatomic) IBOutlet WKWebView *webView;
 
 @end
 
@@ -32,7 +33,8 @@
 	NSString *extension = fileName.pathExtension;
 	fileName = [fileName substringToIndex:fileName.length - (extension.length+1)];
 
-	[self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:fileName	ofType:extension]]]];
+	NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:fileName	ofType:extension]];
+	[self.webView loadFileURL:url allowingReadAccessToURL:url];
 }
 
 @end

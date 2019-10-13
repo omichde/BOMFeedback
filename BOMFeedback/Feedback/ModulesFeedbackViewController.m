@@ -37,8 +37,6 @@
 	NSString *fileName = ((NSArray*)self.moduleConfig[@"files"])[indexPath.row];
 	fileName = [fileName substringToIndex:fileName.length - (fileName.pathExtension.length+1)];
 	cell.textLabel.text = fileName;
-	if ([self.feedbackConfig[@"darkMode"] boolValue])
-		[cell setupDarkMode];
 
 	return cell;
 }

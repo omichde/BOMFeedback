@@ -10,13 +10,6 @@
 
 @interface UIView (DarkMode)
 
-- (void) setupDarkMode;
-
-@end
-
-@interface UIColor (DarkMode)
-
-- (UIColor*)darkModeBackColor;
-- (UIColor*)darkModeFrontColor;
+@property (readonly, nonatomic) BOOL darkModeEnabled;
 
 @end
